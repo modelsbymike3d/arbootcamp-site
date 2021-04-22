@@ -1,13 +1,19 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const MenuEntry = (text, link, key) => {
+  const router = useRouter();
   return (
     <li className="nav-item" key={key}>
       <Link href={link}>
-        <a className="px-3 py-2 flex items-center text-m font-bold leading-snug text-white hover:opacity-75">
+        <a
+          className={`px-3 py-2 flex items-center text-lg leading-snug text-black mono hover:text-red-600 hover:underline ${
+            router.pathname === link ? "font-bold text-red-600" : ""
+          }`}
+        >
           <span className="ml-2">{text}</span>
         </a>
       </Link>
@@ -46,9 +52,9 @@ export default function Navbar({ fixed }) {
         <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
           <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
             <Link href="/">
-              <a className="text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap text-white">
+              <a className="text-md font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap text-black">
                 <img
-                  src="/images/logo.png"
+                  src="/images/logo_dark.png"
                   alt="AR Bootcamp logo"
                   className="w-64"
                 />
@@ -61,7 +67,7 @@ export default function Navbar({ fixed }) {
             >
               <FontAwesomeIcon
                 icon={faBars}
-                className="text-white w-6 fill-current"
+                className="text-black w-6 fill-current"
               />
             </button>
           </div>

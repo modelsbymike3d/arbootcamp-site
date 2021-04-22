@@ -10,7 +10,7 @@ import { CMS_NAME } from "../lib/constants";
 const Tile = (post, index) => {
   const description = post.description || post.excerpt;
   return (
-    <div key={index} className="text-gray-100 my-6">
+    <div key={index} className="text-black my-6">
       <img src={post.image} alt={post.title} className="max-w-md" />
       <h2 className="text-xl underline">
         <a href={`/filters/${post.path}`}>{post.title}</a>
@@ -29,7 +29,7 @@ export default function Filters({ allPosts }) {
           <title>AR Bootcamp Filters</title>
         </Head>
         <Container>
-          <div className="text-gray-100">
+          <div className="text-black">
             <div className="flex flex-col  ">
               <h1 className="color-header text-6xl text-center">Filters!</h1>
               <div>{allPosts.map((post, i) => Tile(post, i))}</div>

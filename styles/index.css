@@ -6,6 +6,10 @@ html {
   font-family: "Lato", sans-serif;
 }
 
+.mono {
+  font-family: "Ubuntu Mono", "Lato", sans-serif;
+}
+
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
@@ -21,7 +25,7 @@ html {
 }
 
 .color-header {
-  font-family: "Gothic A1", "Lato", sans-serif;
+  font-family: "Ubuntu Mono", "Lato", sans-serif;
   font-weight: bold;
   background: -webkit-linear-gradient(
     45deg,

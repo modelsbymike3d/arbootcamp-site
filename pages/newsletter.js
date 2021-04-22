@@ -9,7 +9,7 @@ import { CMS_NAME } from "../lib/constants";
 
 const Tile = (post, index) => {
   return (
-    <div key={index} className="text-gray-100 my-6">
+    <div key={index} className="text-black my-6">
       <h2 className="text-xl underline">
         <a href={`/newsletter/${post.path}`}>{post.title}</a>
       </h2>
@@ -27,7 +27,7 @@ export default function Newsletter({ allPosts }) {
           <title>AR Bootcamp Newsletter</title>
         </Head>
         <Container>
-          <div className="text-gray-100">
+          <div className="text-black">
             <div className="flex flex-col  ">
               <h1 className="color-header text-6xl text-center">
                 Newsletter Archive

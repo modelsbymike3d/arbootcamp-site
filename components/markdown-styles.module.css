@@ -1,5 +1,5 @@
 .markdown {
-  @apply text-lg leading-relaxed text-gray-100;
+  @apply text-lg leading-relaxed text-black;
 }
 
 .markdown img {
@@ -23,21 +23,9 @@
 }
 
 .markdown h2 {
-  @apply text-3xl mt-12 mb-4 leading-snug;
-  font-family: "Gothic A1", "Lato", sans-serif;
+  @apply text-3xl mt-12 mb-4 leading-snug text-red-600;
+  font-family: "Ubuntu Mono", "Lato", sans-serif;
   font-weight: bold;
-  background: -webkit-linear-gradient(
-    45deg,
-    #03a9f4,
-    #f441a5,
-    #ffeb3b,
-    #03a9f4
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: animateHeader 12s linear infinite;
-  background-size: 400%;
 }
 
 .markdown h3 {

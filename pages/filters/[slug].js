@@ -26,7 +26,7 @@ const Filter = ({
   index,
 }) => {
   return (
-    <div key={index} className="text-gray-100 mt-12 w-4/5 sm:w-2/3 mx-auto">
+    <div key={index} className="text-black mt-12 w-4/5 sm:w-2/3 mx-auto">
       <h2 className="color-header text-2xl text-center my-2">{name}</h2>
       <img src={preview} alt={name} className="h-96 mx-auto my-3" />
       <p>{description}</p>
