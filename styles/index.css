@@ -2,14 +2,74 @@
 
 /* Write your own custom base styles here */
 
+html {
+  font-family: "Lato", sans-serif;
+}
+
 /* Start purging... */
 @tailwind components;
 /* Stop purging. */
 
 /* Write you own custom component styles here */
+@keyframes animateHeader {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+.color-header {
+  font-family: "Gothic A1", "Lato", sans-serif;
+  font-weight: bold;
+  background: -webkit-linear-gradient(
+    45deg,
+    #03a9f4,
+    #f441a5,
+    #ffeb3b,
+    #03a9f4
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animateHeader 12s linear infinite;
+  background-size: 400%;
+}
 
 /* Start purging... */
 @tailwind utilities;
 /* Stop purging. */
 
 /* Your own custom utilities */
+.youtube-thumbnail {
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+}
+.youtube-thumbnail-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.youtube-thumbnail-overlay {
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4) url(/images/playButton.svg) no-repeat center /
+    100px 100px;
+  width: 100%;
+  height: 99%;
+  top: 0px;
+}
+.youtube-thumbnail-text {
+  position: absolute;
+  z-index: 3;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #000000aa;
+  color: #ffffffaa;
+  width: 100%;
+  font-size: 1.2rem;
+  font-style: italic;
+}
