@@ -1,16 +1,16 @@
 ---
-title: 'Create your very first Snapchat lens in 10 minutes'
-metaTitle: 'Create your very first Snapchat lens in 10 minutes'
-metaDescription: "There's no better way to learn lens making than by doing! Get started with Lens Studio by making your very first lens!"
-metaImage: /snapchat-beginner/first_lens/first_lens_thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.0'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Create your very first Snapchat lens in 10 minutes"
+metaTitle: "Create your very first Snapchat lens in 10 minutes"
+description: "There's no better way to learn lens making than by doing! Get started with Lens Studio by making your very first lens!"
+image: /images/tutorials/snapchat-beginner/first_lens/first_lens_thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.0"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:56vNBmUtt5Q`

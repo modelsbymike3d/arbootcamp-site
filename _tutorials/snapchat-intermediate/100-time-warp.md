@@ -1,16 +1,16 @@
 ---
-title: 'Create the Time Warp effect in Lens Studio'
-metaTitle: 'Create the Time Warp effect in Lens Studio'
-metaDescription: 'If you have spent any time at all on Snapchat Spotlight, then you have seen the Screen Scanner Pro/Time Warp/Slit Scan lens in action. This seemingly advanced lens is actually super easy to make, you just need to make one small tweak.'
-metaImage: /snapchat-intermediate/time_warp/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.4'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Create the Time Warp effect in Lens Studio"
+metaTitle: "Create the Time Warp effect in Lens Studio"
+description: "If you have spent any time at all on Snapchat Spotlight, then you have seen the Screen Scanner Pro/Time Warp/Slit Scan lens in action. This seemingly advanced lens is actually super easy to make, you just need to make one small tweak."
+image: /images/tutorials/snapchat-intermediate/time-warp/thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.4"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:2CM9OhlD6Ik`

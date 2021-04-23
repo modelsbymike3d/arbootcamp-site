@@ -1,16 +1,16 @@
 ---
-title: 'Add disappearing messages to your Snapchat lenses'
-metaTitle: 'Add disappearing messages to your Snapchat lenses'
-metaDescription: 'Learn how to add your username to a lens and make it disappear automatically!'
-metaImage: /snapchat-beginner/credits/credits_thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.1'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Add disappearing messages to your Snapchat lenses"
+metaTitle: "Add disappearing messages to your Snapchat lenses"
+description: "Learn how to add your username to a lens and make it disappear automatically!"
+image: /images/tutorials/snapchat-beginner/credits/credits_thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.1"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:SqDPwVhznp4`

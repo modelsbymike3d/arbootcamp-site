@@ -1,16 +1,16 @@
 ---
 title: 'Add a sharpening or "alt" effect to your Snapchat lenses'
 metaTitle: 'Add a sharpening or "alt" effect to your Snapchat lenses'
-metaDescription: 'Learn how to add a sharpening or HDR effect to your lenses!'
-metaImage: /snapchat-beginner/sharpen/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.2'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+description: "Learn how to add a sharpening or HDR effect to your lenses!"
+image: /images/tutorials/snapchat-beginner/sharpen/thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.2"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:RWevNaCJ1jM`

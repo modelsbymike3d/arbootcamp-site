@@ -1,16 +1,16 @@
 ---
-title: 'Make things flop around with chain/swing physics in Lens Studio'
-metaTitle: 'Make things flop around with chain/swing physics in Lens Studio'
-metaDescription: 'Chain, or swing, physics can breathe a lot of life into your creations. With the proper setup, chain physics automatically adds swinging motion to elements of your lens. This can remove rigidity from objects in your scene and give everything a more organic feel.'
-metaImage: /snapchat-advanced/chain-physics/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.4'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Make things flop around with chain/swing physics in Lens Studio"
+metaTitle: "Make things flop around with chain/swing physics in Lens Studio"
+description: "Chain, or swing, physics can breathe a lot of life into your creations. With the proper setup, chain physics automatically adds swinging motion to elements of your lens. This can remove rigidity from objects in your scene and give everything a more organic feel."
+image: /images/tutorials/snapchat-advanced/chain-physics/thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.4"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:6eIlx8EAxwY`

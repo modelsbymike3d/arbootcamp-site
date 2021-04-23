@@ -1,16 +1,16 @@
 ---
-title: 'Create an adjustable background blur/bokeh effect with Lens Studio'
-metaTitle: 'Create an adjustable background blur/bokeh effect with Lens Studio'
-metaDescription: "It's not too hard to add a blurry background to your Snapchat lenses for that portrait effect. But let's take it to the next level and make it adjustable!"
-metaImage: /snapchat-intermediate/background-blur/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.3.1'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Create an adjustable background blur/bokeh effect with Lens Studio"
+metaTitle: "Create an adjustable background blur/bokeh effect with Lens Studio"
+description: "It's not too hard to add a blurry background to your Snapchat lenses for that portrait effect. But let's take it to the next level and make it adjustable!"
+image: /images/tutorials/snapchat-intermediate/background-blur/thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.3.1"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:dNAj1iyy-ew`
@@ -84,7 +84,7 @@ In this case it is changing the color of a material, so we just need to modify i
 function changeColor(newColor) {
   script.targetVisual.mainPass.baseColor = newColor;
 }
-script.colorPickerScript.api.addCallback('onColorChanged', changeColor);
+script.colorPickerScript.api.addCallback("onColorChanged", changeColor);
 // Change the selected color to the color at the bottom of the palette
 script.colorPickerScript.api.setSliderValue(0);
 ```
@@ -107,7 +107,7 @@ function changeBlur(value) {
   script.blurMat.mainPass.blurFactor = script.multiplier * value;
 }
 
-script.colorPickerScript.api.addCallback('onSliderValueChanged', changeBlur);
+script.colorPickerScript.api.addCallback("onSliderValueChanged", changeBlur);
 script.colorPickerScript.api.setSliderValue(script.initialVal);
 changeBlur(script.initialVal);
 ```

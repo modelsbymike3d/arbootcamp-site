@@ -1,16 +1,16 @@
 ---
-title: 'Change the opacity of an image, color correction, or material with a slider in Lens Studio'
-metaTitle: 'Change the opacity of an image, color correction, or material with a slider in Lens Studio'
-metaDescription: 'Learn how to change the opacity of any image or color correction or material with a slider as we build a completely reusable script in Lens Studio!'
-metaImage: /snapchat-intermediate/opacity-slider/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.3.3'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Change the opacity of an image, color correction, or material with a slider in Lens Studio"
+metaTitle: "Change the opacity of an image, color correction, or material with a slider in Lens Studio"
+description: "Learn how to change the opacity of any image or color correction or material with a slider as we build a completely reusable script in Lens Studio!"
+image: /images/tutorials/snapchat-intermediate/opacity-slider/thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.3.3"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:DOporB-Eukg`
@@ -89,7 +89,7 @@ function handleChange(value) {
   print(value);
 }
 
-script.colorPickerScript.api.addCallback('onSliderValueChanged', handleChange);
+script.colorPickerScript.api.addCallback("onSliderValueChanged", handleChange);
 
 handleChange(script.initialValue);
 script.colorPickerScript.api.setSliderValue(script.initialValue);
@@ -107,7 +107,7 @@ Now that we can see our screen image, let's control the opacity! Inside our `han
 function handleChange(value) {
   print(value);
   switch (script.entity) {
-    case 'image': {
+    case "image": {
       script.image.mainPass.baseColor = new vec4(1, 1, 1, value);
       break;
     }
@@ -179,20 +179,25 @@ Here is our final script to give us ultimate control over opacity! It isn't comp
 function handleChange(value) {
   print(value);
   switch (script.entity) {
-    case 'image': {
+    case "image": {
       script.image.mainPass.baseColor = new vec4(1, 1, 1, value);
       break;
     }
-    case 'post': {
+    case "post": {
       script.postEffect.mainPass.baseColor = new vec4(1, 1, 1, value);
       break;
     }
-    case 'mat': {
+    case "mat": {
       var currColor = script.mat.mainPass.baseColor;
-      script.mat.mainPass.baseColor = new vec4(currColor.r, currColor.g, currColor.b, value);
+      script.mat.mainPass.baseColor = new vec4(
+        currColor.r,
+        currColor.g,
+        currColor.b,
+        value
+      );
       break;
     }
-    case 'graph': {
+    case "graph": {
       script.graphMat.mainPass[script.property] = value * script.multiplier;
       break;
     }
@@ -201,7 +206,7 @@ function handleChange(value) {
   }
 }
 
-script.colorPickerScript.api.addCallback('onSliderValueChanged', handleChange);
+script.colorPickerScript.api.addCallback("onSliderValueChanged", handleChange);
 
 handleChange(script.initialValue);
 script.colorPickerScript.api.setSliderValue(script.initialValue);

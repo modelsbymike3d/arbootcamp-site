@@ -1,16 +1,16 @@
 ---
-title: 'How to make a twerking lens for Snapchat using Mixamo and Lens Studio'
-metaTitle: 'How to make a twerking lens for Snapchat using Mixamo and Lens Studio'
-metaDescription: 'If you have not made some sort of twerking lens, can you still call yourself a lens creator? Not to worry, we will go over everything you need to know in this tutorial! All it takes is a 3D model, Mixamo, and a Lens Studio template.'
-metaImage: /snapchat-beginner/twerk/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.4.1'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "How to make a twerking lens for Snapchat using Mixamo and Lens Studio"
+metaTitle: "How to make a twerking lens for Snapchat using Mixamo and Lens Studio"
+description: "If you have not made some sort of twerking lens, can you still call yourself a lens creator? Not to worry, we will go over everything you need to know in this tutorial! All it takes is a 3D model, Mixamo, and a Lens Studio template."
+image: /images/tutorials/snapchat-beginner/twerk/thumbnail.png
+software: "Lens Studio"
+software_version: "3.4.1"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:lcTdTkdQ5nc`

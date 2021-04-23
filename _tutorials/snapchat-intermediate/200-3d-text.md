@@ -1,16 +1,16 @@
 ---
-title: 'Create customizable 3D text in Lens Studio'
-metaTitle: 'Create customizable 3D text in Lens Studio'
-metaDescription: 'Lens Studio does not have native 3D text, but we can still fake the effect with some pretty convincing results! Learn how to use the Text Texture resource and a little scripting to create this effect!'
-metaImage: /snapchat-intermediate/3d-text/3d_text_thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.1'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Create customizable 3D text in Lens Studio"
+metaTitle: "Create customizable 3D text in Lens Studio"
+description: "Lens Studio does not have native 3D text, but we can still fake the effect with some pretty convincing results! Learn how to use the Text Texture resource and a little scripting to create this effect!"
+image: /images/tutorials/snapchat-intermediate/3d-text/3d_text_thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.1"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:A2J0Ruf9cHw`
@@ -78,7 +78,7 @@ var instances = [];
 function init() {
   for (var i = 0; i < script.numLayers; i++) {
     var newObj = script.parent.copySceneObject(script.textImage);
-    var imgComp = newObj.getComponent('Component.Image');
+    var imgComp = newObj.getComponent("Component.Image");
     imgComp.mainMaterial = script.shadowMat;
     instances.push(newObj);
   }
@@ -107,7 +107,7 @@ function position() {
 We only need to create our layers once when the lens is turned on. However, while editing our lens, it will be helpful to have our 3D effect update as we move and scale our Face Image. For that, we just add an "UpdateEvent" and call our `position` function if the flag is enabled. When you are ready to publish your lens, just turn off the autoUpdate flag. If you forget it won't be the end of the world, but depending on how many other scripts you are running you might start noticing an impact. We'll also go ahead and make our function calls to init() and position() when our script runs.
 
 ```javascript
-script.createEvent('UpdateEvent').bind(function() {
+script.createEvent("UpdateEvent").bind(function () {
   if (script.autoUpdate) {
     position();
   }
@@ -122,8 +122,8 @@ position();
 Last, but not least, let's take a look at how to programmatically set the text value on the Text Texture. If we were using a Text Component, we would just have to assign our text to the `text` property, but since this is a Text Texture, the `text` property is found inside the `control` property. For this example I'm going to pull the user's display name from the [UserContextSystem](https://lensstudio.snapchat.com/api/classes/UserContextSystem/) and use that for our text value.
 
 ```javascript
-global.userContextSystem.requestDisplayName(function(displayName) {
-  print('Hello ' + displayName);
+global.userContextSystem.requestDisplayName(function (displayName) {
+  print("Hello " + displayName);
   script.textTexture.control.text = displayName;
 });
 ```
@@ -147,7 +147,7 @@ var instances = [];
 function init() {
   for (var i = 0; i < script.numLayers; i++) {
     var newObj = script.parent.copySceneObject(script.textImage);
-    var imgComp = newObj.getComponent('Component.Image');
+    var imgComp = newObj.getComponent("Component.Image");
     imgComp.mainMaterial = script.shadowMat;
     instances.push(newObj);
   }
@@ -164,7 +164,7 @@ function position() {
   }
 }
 
-script.createEvent('UpdateEvent').bind(function() {
+script.createEvent("UpdateEvent").bind(function () {
   if (script.autoUpdate) {
     position();
   }
@@ -173,8 +173,8 @@ script.createEvent('UpdateEvent').bind(function() {
 init();
 position();
 
-global.userContextSystem.requestDisplayName(function(displayName) {
-  print('Hello ' + displayName);
+global.userContextSystem.requestDisplayName(function (displayName) {
+  print("Hello " + displayName);
   script.textTexture.control.text = displayName;
   // The display name inside of Lens Studio is 'Snap User'
   // but Snapchat doesn't like the word 'Snap' appearing

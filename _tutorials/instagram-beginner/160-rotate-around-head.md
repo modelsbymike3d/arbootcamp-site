@@ -1,16 +1,16 @@
 ---
-title: 'Make objects rotate around the head in Spark AR'
-metaTitle: 'Make objects rotate around the head in Spark AR'
-metaDescription: 'In this Spark AR tutorial you will learn that making objects rotate around the head is super easy to do. All it takes is a little scene setup and the click of a button.'
-metaImage: /instagram-beginner/rotate-around-head/thumbnail.jpg
-software: 'Spark AR Studio'
-software_version: 'v109'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Make objects rotate around the head in Spark AR"
+metaTitle: "Make objects rotate around the head in Spark AR"
+description: "In this Spark AR tutorial you will learn that making objects rotate around the head is super easy to do. All it takes is a little scene setup and the click of a button."
+image: /images/tutorials/instagram-beginner/rotate-around-head/thumbnail.jpg
+software: "Spark AR Studio"
+software_version: "v109"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:8Ezbm9mjAuk`

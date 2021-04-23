@@ -1,16 +1,16 @@
 ---
-title: 'Make objects rotate around the head using tweens'
-metaTitle: 'Make objects rotate around the head using tweens'
-metaDescription: 'In this Lens Studio tutorial you will learn how easy it is to make objects rotate around the head using the built-in tween scripts - no custom coding required. All it takes is adding your objects and using the right settings on the tween scripts.'
-metaImage: /snapchat-beginner/rotate-around-head/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.4'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Make objects rotate around the head using tweens"
+metaTitle: "Make objects rotate around the head using tweens"
+description: "In this Lens Studio tutorial you will learn how easy it is to make objects rotate around the head using the built-in tween scripts - no custom coding required. All it takes is adding your objects and using the right settings on the tween scripts."
+image: /images/tutorials/snapchat-beginner/rotate-around-head/thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.4"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:NyESG8jb5FQ`

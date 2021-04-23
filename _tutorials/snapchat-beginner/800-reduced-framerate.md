@@ -1,16 +1,16 @@
 ---
-title: 'Create a reduced framerate effect in Lens Studio using the visual script editor'
-metaTitle: 'Create a reduced framerate effect in Lens Studio using the visual script editor'
-metaDescription: 'In this Lens Studio tutorial you will learn how to create a reduced framerate filter to mimic old fashioned film cameras. You can easily add this effect to any lens and we will use the new visual scripting editor in Lens Studio.'
-metaImage: /snapchat-beginner/reduced-framerate/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.4.2'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Create a reduced framerate effect in Lens Studio using the visual script editor"
+metaTitle: "Create a reduced framerate effect in Lens Studio using the visual script editor"
+description: "In this Lens Studio tutorial you will learn how to create a reduced framerate filter to mimic old fashioned film cameras. You can easily add this effect to any lens and we will use the new visual scripting editor in Lens Studio."
+image: /images/tutorials/snapchat-beginner/reduced-framerate/thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.4.2"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:E3bQC5jATo0`

@@ -1,16 +1,16 @@
 ---
-title: 'Easily create freckles using Spark AR Studio'
-metaTitle: 'Easily create freckles using Spark AR Studio'
-metaDescription: "Learn how to easily add freckles to the user's face using the Face Mesh!"
-metaImage: /instagram-beginner/easy_freckles/spark_freckles_thumbnail.jpg
-software: 'Spark AR Studio'
-software_version: 'v98'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Easily create freckles using Spark AR Studio"
+metaTitle: "Easily create freckles using Spark AR Studio"
+description: "Learn how to easily add freckles to the user's face using the Face Mesh!"
+image: /images/tutorials/instagram-beginner/easy_freckles/spark_freckles_thumbnail.jpg
+software: "Spark AR Studio"
+software_version: "v98"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:P46w_nIg7OE`

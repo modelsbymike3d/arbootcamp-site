@@ -1,16 +1,16 @@
 ---
-title: 'Add dynamic text directly to 3D objects in Lens Studio'
-metaTitle: 'Add dynamic text directly to 3D objects in Lens Studio'
-metaDescription: 'Text components and screen text are well known features of Lens Studio. The text texture, however, is lesser known but is a super powerful feature. With the text texture, you can add dynamic text directly to the surface of a 3D object.'
-metaImage: /snapchat-advanced/text-texture/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.2'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Add dynamic text directly to 3D objects in Lens Studio"
+metaTitle: "Add dynamic text directly to 3D objects in Lens Studio"
+description: "Text components and screen text are well known features of Lens Studio. The text texture, however, is lesser known but is a super powerful feature. With the text texture, you can add dynamic text directly to the surface of a 3D object."
+image: /images/tutorials/snapchat-advanced/text-texture/thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.2"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:mVnml1j_XlM`
@@ -57,7 +57,7 @@ If we wanted some set text on the model, it would be immensely easier to set it 
 ```javascript
 // @input Asset.Texture mainText
 
-global.userContextSystem.requestDisplayName(function(displayName) {
+global.userContextSystem.requestDisplayName(function (displayName) {
   script.mainText.control.text = displayName.toUpperCase();
 
   // Uncomment the below line when creating the preview

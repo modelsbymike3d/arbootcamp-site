@@ -1,16 +1,16 @@
 ---
-title: 'Recreate the Clone Photos filter from TikTok using Lens Studio'
-metaTitle: 'Recreate the Clone Photos filter from TikTok using Lens Studio'
-metaDescription: 'The more the merrier. More is always better. These wise words of wisdom have been handed down for generations, and now you can bring them to pass inside Snapchat. Here you will learn how to exactly recreate my viral cloning lens. Just make sure you change it up a bit so we do not get caught ;)'
-metaImage: /snapchat-advanced/clone/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.4'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Recreate the Clone Photos filter from TikTok using Lens Studio"
+metaTitle: "Recreate the Clone Photos filter from TikTok using Lens Studio"
+description: "The more the merrier. More is always better. These wise words of wisdom have been handed down for generations, and now you can bring them to pass inside Snapchat. Here you will learn how to exactly recreate my viral cloning lens. Just make sure you change it up a bit so we do not get caught ;)"
+image: /images/tutorials/snapchat-advanced/clone/thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.4"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:69XAmkXiL6U`
@@ -58,7 +58,7 @@ Create a second script for our helper script and add the following code:
 // @input Component.ScriptComponent controller
 // @input int numberOfClones
 
-script.createEvent('TapEvent').bind(function() {
+script.createEvent("TapEvent").bind(function () {
   script.controller.api.triggerClones(script.numberOfClones);
 });
 ```
@@ -114,7 +114,7 @@ for (var i = 0; i < script.cloneImgs.length; i++) {
 }
 
 function createClone(index) {
-  print('Making clone ' + index);
+  print("Making clone " + index);
   script.cloneMats[index].mainPass.baseTex = script.cameraTex.copyFrame();
   script.cloneMats[index].mainPass.opacityTex = script.maskTex.copyFrame();
   script.cloneImgs[index].enabled = true;
@@ -151,14 +151,14 @@ for (var i = 0; i < script.cloneImgs.length; i++) {
 }
 
 function createClone(index) {
-  print('Making clone ' + index);
+  print("Making clone " + index);
   script.cloneMats[index].mainPass.baseTex = script.cameraTex.copyFrame();
   script.cloneMats[index].mainPass.opacityTex = script.maskTex.copyFrame();
   script.cloneImgs[index].enabled = true;
 }
 
-var delayedEvent = script.createEvent('DelayedCallbackEvent');
-delayedEvent.bind(function() {
+var delayedEvent = script.createEvent("DelayedCallbackEvent");
+delayedEvent.bind(function () {
   createClone(currentIndex);
 
   currentIndex += 1;
@@ -207,14 +207,14 @@ for (var i = 0; i < script.cloneImgs.length; i++) {
 }
 
 function createClone(index) {
-  print('Making clone ' + index);
+  print("Making clone " + index);
   script.cloneMats[index].mainPass.baseTex = script.cameraTex.copyFrame();
   script.cloneMats[index].mainPass.opacityTex = script.maskTex.copyFrame();
   script.cloneImgs[index].enabled = true;
 }
 
-var delayedEvent = script.createEvent('DelayedCallbackEvent');
-delayedEvent.bind(function() {
+var delayedEvent = script.createEvent("DelayedCallbackEvent");
+delayedEvent.bind(function () {
   createClone(currentIndex);
 
   currentIndex += 1;
@@ -231,13 +231,13 @@ function startCloning(num) {
   delayedEvent.reset(delayTime);
 }
 
-script.createEvent('UpdateEvent').bind(function() {
+script.createEvent("UpdateEvent").bind(function () {
   if (hasStarted && currentIndex < cloneCount) {
     var timeRemaining = Math.floor(delayedEvent.getTimeLeft());
     var displayTime = delayTime - timeRemaining;
     script.countdownText.text = displayTime.toString();
   } else {
-    script.countdownText.text = '';
+    script.countdownText.text = "";
   }
 });
 

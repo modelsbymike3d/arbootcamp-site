@@ -1,16 +1,16 @@
 ---
-title: 'Make your own Potato Boss style lens for Snapchat and Snap Camera'
-metaTitle: 'Make your own Potato Boss style lens for Snapchat and Snap Camera'
-metaDescription: 'Create your very own "Potato Boss" style lens using Lens Studio! Move beyond rigid 3D objects and learn how to add a little more motion and life to your creations!'
-metaImage: /snapchat-intermediate/potato-boss/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.3'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Make your own Potato Boss style lens for Snapchat and Snap Camera"
+metaTitle: "Make your own Potato Boss style lens for Snapchat and Snap Camera"
+description: 'Create your very own "Potato Boss" style lens using Lens Studio! Move beyond rigid 3D objects and learn how to add a little more motion and life to your creations!'
+image: /images/tutorials/snapchat-intermediate/potato-boss/thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.3"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:FGOfYiV3OSM`
@@ -60,7 +60,7 @@ var transform = script.getTransform();
 if (script.target) {
   var targetTransform = script.target.getTransform();
 } else {
-  print('SmoothFollow.js: Please assign the target');
+  print("SmoothFollow.js: Please assign the target");
 }
 
 function onUpdateEvent(eventData) {
@@ -74,7 +74,7 @@ function onUpdateEvent(eventData) {
     transform.setWorldPosition(smoothedPosition);
   }
 }
-var event = script.createEvent('UpdateEvent');
+var event = script.createEvent("UpdateEvent");
 event.bind(onUpdateEvent);
 ```
 

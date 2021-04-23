@@ -6,13 +6,14 @@ import Layout from "../components/layout";
 import { getPages } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
+import H1 from "../components/h1";
 
 const Tile = (post, index) => {
   const description = post.description || post.excerpt;
   return (
     <div key={index} className="text-black my-6">
       <img src={post.image} alt={post.title} className="max-w-md" />
-      <h2 className="text-xl underline">
+      <h2 className="mono text-2xl underline">
         <a href={`/blog/${post.path}`}>{post.title}</a>
       </h2>
       <div className="italic my-2">{post.date}</div>
@@ -31,7 +32,7 @@ export default function Blog({ allPosts }) {
         <Container>
           <div className="text-black">
             <div className="flex flex-col  ">
-              <h1 className="color-header text-6xl text-center">Blog</h1>
+              <H1 title={`Blog`} />
               <div>{allPosts.map((post, i) => Tile(post, i))}</div>
             </div>
           </div>

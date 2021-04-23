@@ -1,16 +1,16 @@
 ---
-title: 'Make your own color correction filters with LUTs'
-metaTitle: 'Make your own color correction filters with LUTs'
-metaDescription: 'Color correction filters using LUTs (lookup tables) are super popular. Color corrections can be used to enhance the look and feel of a complex lens, or they can be used as standalone filters. LUTs are usually created using Photoshop or Lightroom, but for this tutorial we will be using the freely available Photopea.'
-metaImage: /snapchat-beginner/lut-color-correction/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.4.2'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Make your own color correction filters with LUTs"
+metaTitle: "Make your own color correction filters with LUTs"
+description: "Color correction filters using LUTs (lookup tables) are super popular. Color corrections can be used to enhance the look and feel of a complex lens, or they can be used as standalone filters. LUTs are usually created using Photoshop or Lightroom, but for this tutorial we will be using the freely available Photopea."
+image: /images/tutorials/snapchat-beginner/lut-color-correction/thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.4.2"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:KSvoPtjGFZA`

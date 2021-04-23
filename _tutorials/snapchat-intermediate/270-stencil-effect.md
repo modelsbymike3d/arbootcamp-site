@@ -1,16 +1,16 @@
 ---
-title: 'Stencil effect in Lens Studio'
-metaTitle: 'Stencil effect in Lens Studio'
-metaDescription: 'Learn how to overlay yourself as a stencil in Lens Studio! This is a nice artistic look that does well when used in lenses.'
-metaImage: /snapchat-intermediate/stencil-effect/thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.3.3'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Stencil effect in Lens Studio"
+metaTitle: "Stencil effect in Lens Studio"
+description: "Learn how to overlay yourself as a stencil in Lens Studio! This is a nice artistic look that does well when used in lenses."
+image: /images/tutorials/snapchat-intermediate/stencil-effect/thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.3.3"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:fNXe-QrMJU4`
@@ -37,13 +37,13 @@ You can of course create this stencil effect with a single background, but I lik
 // @input Asset.Texture[] images
 var index = 0;
 script.background.mainPass.baseTex = script.images[index];
-script.createEvent('TapEvent').bind(function() {
+script.createEvent("TapEvent").bind(function () {
   index += 1;
   if (index >= script.images.length) {
     index = 0;
   }
   script.background.mainPass.baseTex = script.images[index];
-  print('Tap');
+  print("Tap");
 });
 ```
 

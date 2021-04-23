@@ -1,16 +1,16 @@
 ---
-title: 'Tritone material in Lens Studio'
-metaTitle: 'Tritone material in Lens Studio'
-metaDescription: 'Learn how to create your very own reusable and configurable tritone material in Lens Studio! Use it to convert any lens to only three colors.'
-metaImage: /snapchat-intermediate/tritone-material/tritone_thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.1'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Tritone material in Lens Studio"
+metaTitle: "Tritone material in Lens Studio"
+description: "Learn how to create your very own reusable and configurable tritone material in Lens Studio! Use it to convert any lens to only three colors."
+image: /images/tutorials/snapchat-intermediate/tritone-material/tritone_thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.1"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:2LHhuZPZP9o`

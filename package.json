@@ -21,6 +21,8 @@
     "next-transpile-modules": "^6.4.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-lazy-load": "^3.1.13",
+    "react-lazyload": "^3.2.0",
     "remark": "13.0.0",
     "remark-html": "13.0.1",
     "remark-unwrap-images": "^2.0.0",

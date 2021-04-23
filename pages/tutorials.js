@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Container from "../components/container";
 import MoreStories from "../components/more-stories";
 import HeroPost from "../components/hero-post";
@@ -6,20 +7,65 @@ import Layout from "../components/layout";
 import { getPages } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
+import LazyLoad from "react-lazyload";
+
+const sectionOrder = [
+  "snapchat-beginner",
+  "snapchat-intermediate",
+  "snapchat-advanced",
+  "instagram-beginner",
+  "instagram-intermediate",
+  "instagram-advanced",
+];
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function makeTitle(s) {
+  const arr = s.split("-");
+  const words = arr.map(capitalizeFirstLetter);
+  return words.join(" ");
+}
 
 const Tile = (post, index) => {
   return (
     <div key={index} className="text-black my-6">
-      <h2 className="text-xl underline">
-        <a href={`/newsletter/${post.path}`}>{post.title}</a>
-      </h2>
-      <div className="italic my-2">{post.date}</div>
-      <p>{post.description}</p>
+      <div className="flex flex-col sm:flex-row">
+        <div>
+          <LazyLoad height={216} offset={300}>
+            <img
+              src={post.image}
+              alt={post.title}
+              className="max-w-md sm:w-96"
+            />
+          </LazyLoad>
+        </div>
+
+        <div className="sm:ml-4">
+          <h3 className="mono text-2xl underline">
+            <a href={`${post.path}`}>{post.title}</a>
+          </h3>
+          <p>{post.description}</p>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default function Newsletter({ allPosts }) {
+const Section = (array, title) => {
+  if (array.length === 0) return null;
+  return (
+    <div>
+      <h2 className="mono font-bold text-4xl text-red-600 text-center mt-8">
+        {makeTitle(title)}
+      </h2>
+      <div>{array.map((post, i) => Tile(post, i))}</div>
+    </div>
+  );
+};
+
+export default function Tutorials({ tutorialObj }) {
   return (
     <>
       <Layout>
@@ -30,8 +76,8 @@ export default function Newsletter({ allPosts }) {
           <div className="text-black">
             <div className="flex flex-col  ">
               <h1 className="mono text-6xl text-center">Tutorials</h1>
-              <p>{`Stay up-to-date with augmented reality on Snapchat, Instagram, and Facebook! The AR Bootcamp newsletter is brought to you by me, Mike (aka modelsbymike3d), and I'll be sharing my tips, tricks, thoughts, and ramblings on social AR. Whether you are looking to get started with AR filters, are a seasoned professional, or you have no idea what I'm talking about, this newsletter is for you!`}</p>
-              <div>{allPosts.map((post, i) => Tile(post, i))}</div>
+              <p>{`If you want to learn how to create awesome augmented reality filters, you've come to the right place!`}</p>
+              <div>{sectionOrder.map((s) => Section(tutorialObj[s], s))}</div>
             </div>
           </div>
         </Container>
@@ -43,7 +89,20 @@ export default function Newsletter({ allPosts }) {
 export async function getStaticProps() {
   const allPosts = getPages("_tutorials");
 
+  const tutorialObj = {
+    "snapchat-beginner": [],
+    "snapchat-intermediate": [],
+    "snapchat-advanced": [],
+    "instagram-beginner": [],
+    "instagram-intermediate": [],
+    "instagram-advanced": [],
+  };
+
+  allPosts.forEach((p) => {
+    tutorialObj[p.section].push(p);
+  });
+
   return {
-    props: { allPosts },
+    props: { tutorialObj },
   };
 }

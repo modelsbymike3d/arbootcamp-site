@@ -1,16 +1,16 @@
 ---
-title: 'Quicky and easily add grain to your Snapchat lenses'
-metaTitle: 'Quicky and easily add grain to your Snapchat lenses'
-metaDescription: 'Film grain is a popular feature of lenses, and fortunately it is easy to add to your own.'
-metaImage: /snapchat-beginner/grain/grain-thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.1'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Quicky and easily add grain to your Snapchat lenses"
+metaTitle: "Quicky and easily add grain to your Snapchat lenses"
+description: "Film grain is a popular feature of lenses, and fortunately it is easy to add to your own."
+image: /images/tutorials/snapchat-beginner/grain/grain-thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.1"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:q3PtpCixl5k`

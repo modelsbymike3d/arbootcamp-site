@@ -1,16 +1,16 @@
 ---
-title: 'Create an old-fashioned reduced or stuttered framerate in Spark AR'
-metaTitle: 'Create an old-fashioned reduced or stuttered framerate in Spark AR'
-metaDescription: 'Learn how to create a reduced framerate effect to simulate the look of old film cameras!'
-metaImage: /instagram-beginner/reduced_framerate/reduced_framerate_thumbnail.jpg
-software: 'Spark AR Studio'
-software_version: 'v98'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Create an old-fashioned reduced or stuttered framerate in Spark AR"
+metaTitle: "Create an old-fashioned reduced or stuttered framerate in Spark AR"
+description: "Learn how to create a reduced framerate effect to simulate the look of old film cameras!"
+image: /images/tutorials/instagram-beginner/reduced_framerate/reduced_framerate_thumbnail.jpg
+software: "Spark AR Studio"
+software_version: "v98"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:-p0q9Gk-jpc`

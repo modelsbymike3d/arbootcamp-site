@@ -1,16 +1,16 @@
 ---
-title: 'How to add grain to your Instagram and Facebook filters'
-metaTitle: 'How to add grain to your Instagram and Facebook filters'
-metaDescription: 'Film grain is a popular feature of filters, and fortunately it is easy to add to your own using some free resources.'
-metaImage: /instagram-beginner/grain/grain-thumbnail.jpg
-software: 'Spark AR Studio'
-software_version: 'v98'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "How to add grain to your Instagram and Facebook filters"
+metaTitle: "How to add grain to your Instagram and Facebook filters"
+description: "Film grain is a popular feature of filters, and fortunately it is easy to add to your own using some free resources."
+image: /images/tutorials/instagram-beginner/grain/grain-thumbnail.jpg
+software: "Spark AR Studio"
+software_version: "v98"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:u31vRoG3uns`

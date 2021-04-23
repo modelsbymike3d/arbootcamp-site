@@ -30,7 +30,7 @@ export default function AuthorSection({
   contributor_linkedin,
 }) {
   return (
-    <div className="max-w-2xl mx-auto text-gray-300 flex sm:flex-row flex-col">
+    <div className="max-w-2xl mx-auto text-gray-600 flex sm:flex-row flex-col">
       {contributor && contributor_site ? (
         <div className="my-2 mr-6">
           <a

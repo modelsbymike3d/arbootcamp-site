@@ -1,16 +1,16 @@
 ---
-title: 'Super easy freckles in Lens Studio'
-metaTitle: 'Super easy freckles in Lens Studio'
-metaDescription: "Learn how to easily add freckles to the user's face using the Face Mesh!"
-metaImage: /snapchat-beginner/easy_freckles/freckles_thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.1'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Super easy freckles in Lens Studio"
+metaTitle: "Super easy freckles in Lens Studio"
+description: "Learn how to easily add freckles to the user's face using the Face Mesh!"
+image: /images/tutorials/snapchat-beginner/easy_freckles/freckles_thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.1"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:OKTgCRxE_h0`

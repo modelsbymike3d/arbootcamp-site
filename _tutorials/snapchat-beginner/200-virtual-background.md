@@ -1,16 +1,16 @@
 ---
-title: 'Tap to change the background in Lens Studio'
-metaTitle: 'Tap to change the background in Lens Studio'
-metaDescription: 'Learn how to add a virtual background or green screen effect to your lenses using segmentation!'
-metaImage: /snapchat-beginner/virtual_background/virtual_background_thumbnail.jpg
-software: 'Lens Studio'
-software_version: '3.1'
-author: 'Michael Porter'
-snapchat: 'modelsbymike3d'
-instagram: 'modelsbymike3d'
-twitter: 'modelsbymike3d'
-youtube: 'https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg'
-homepage: 'https://modelsbymike3d.com'
+title: "Tap to change the background in Lens Studio"
+metaTitle: "Tap to change the background in Lens Studio"
+description: "Learn how to add a virtual background or green screen effect to your lenses using segmentation!"
+image: /images/tutorials/snapchat-beginner/virtual_background/virtual_background_thumbnail.jpg
+software: "Lens Studio"
+software_version: "3.1"
+author: "Michael Porter"
+snapchat: "modelsbymike3d"
+instagram: "modelsbymike3d"
+twitter: "modelsbymike3d"
+youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
+homepage: "https://modelsbymike3d.com"
 ---
 
 `youtube:FzHGZmdg9bE`
@@ -81,8 +81,8 @@ Okay, now back to our script. Select our script again in the Resources Panel to 
 The first thing we need to do is detect when the user taps on the screen. Add the following code to your script:
 
 ```javascript
-script.createEvent('TapEvent').bind(function() {
-  print('Tap!');
+script.createEvent("TapEvent").bind(function () {
+  print("Tap!");
 });
 ```
 
@@ -100,8 +100,8 @@ So we have a script and we can detect when someone taps the screen. How do we ch
 var index = 0;
 script.background.mainPass.baseTex = script.images[index];
 
-script.createEvent('TapEvent').bind(function() {
-  print('Tap');
+script.createEvent("TapEvent").bind(function () {
+  print("Tap");
 });
 ```
 
@@ -117,10 +117,10 @@ Now we are going to add a couple lines inside our Tap Event code.
 var index = 0;
 script.background.mainPass.baseTex = script.images[index];
 
-script.createEvent('TapEvent').bind(function() {
+script.createEvent("TapEvent").bind(function () {
   index += 1;
   script.background.mainPass.baseTex = script.images[index];
-  print('Tap');
+  print("Tap");
 });
 ```
 
@@ -136,13 +136,13 @@ To take care of this, we'll just reset our index to 0 whenever we go too high. L
 var index = 0;
 script.background.mainPass.baseTex = script.images[index];
 
-script.createEvent('TapEvent').bind(function() {
+script.createEvent("TapEvent").bind(function () {
   index += 1;
   if (index >= script.images.length) {
     index = 0;
   }
   script.background.mainPass.baseTex = script.images[index];
-  print('Tap');
+  print("Tap");
 });
 ```
 
