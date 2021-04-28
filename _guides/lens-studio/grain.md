@@ -11,7 +11,7 @@ The most popular way of making grain in Lens Studio is probably by overlaying an
 
 ## Using an image overlay
 
-Adding an image overlay is a pretty straightforward way of adding grain to your lenses. The hardest part might be finding grain images, but fortunately resources like [Film Composite](https://www.filmcomposite.com/free-film-assets) exist with some free images of film grain. Watch the video below or [read the tutorial here](https://learn.arbootcamp.com/snapchat-beginner/grain).
+Adding an image overlay is a pretty straightforward way of adding grain to your lenses. The hardest part might be finding grain images, but fortunately resources like [Film Composite](https://www.filmcomposite.com/free-film-assets) exist with some free images of film grain. Watch the video below or [read the tutorial here](https://arbootcamp.com/snapchat-beginner/grain).
 
 `youtube:q3PtpCixl5k`
 

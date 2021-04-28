@@ -63,7 +63,7 @@ You can adjust the choppiness by adjusting the Second Value of the Modulo patch.
 
 ## Final touches
 
-We already added a black and white effect, but let's add some grain as a final touch. We already have a [tutorial on how to add grain](https://learn.arbootcamp.com/instagram-beginner/grain), so here we are going to skip that part and instead focus on syncing the grain with our framerate. The grain doesn't have to be synced with the framerate, but it gives a more authentic feel if the two are synced.
+We already added a black and white effect, but let's add some grain as a final touch. We already have a [tutorial on how to add grain](https://arbootcamp.com/instagram-beginner/grain), so here we are going to skip that part and instead focus on syncing the grain with our framerate. The grain doesn't have to be synced with the framerate, but it gives a more authentic feel if the two are synced.
 
 ### Adding a Scene Render Pass
 

@@ -30,7 +30,7 @@ The first thing we need are some images for the background. In the past I've use
 
 Next create a new [Render Target](https://lensstudio.snapchat.com/guides/general/camera/) and name it 'Background.' Once you have that, create a new camera, put it on a new layer (potentially not strictly necessary, but I like to keep things organized), set the Render Target to the Background target you just created, and set the Camera Type to 'Orthographic.' Now add a Screen Image and make sure it is a child of this new camera and on the same layer. As it stands, we won't see anything going on in the Preview Panel because everything we just added is outputting to a non-visible render target. Just so that we can see what is going on, go to the Scene Config and select the Background render target for the Live Target (we'll switch this back in a bit). Now you should see a placeholder image for the Screen Image you added.
 
-You can of course create this stencil effect with a single background, but I like to include several for the user to cycle through. This does require some scripting, but fortunately my [Virtual Background tutorial](https://learn.arbootcamp.com/snapchat-beginner/virtual-background) covers that and we can just reuse the script from it. It's nothing fancy, but much easier to just copy-paste than to write from scratch. Here is the code:
+You can of course create this stencil effect with a single background, but I like to include several for the user to cycle through. This does require some scripting, but fortunately my [Virtual Background tutorial](https://arbootcamp.com/snapchat-beginner/virtual-background) covers that and we can just reuse the script from it. It's nothing fancy, but much easier to just copy-paste than to write from scratch. Here is the code:
 
 ```javascript
 // -----JS CODE-----
@@ -54,7 +54,7 @@ Create a new Script, copy and paste the code, then add it to your scene (either 
 
 Now it is time to create our stencil effect. In the Objects Panel, create a new Screen Image (I also changed the fill mode to "Stretch" for it). This should create a new Orthographic Camera with your new Screen Image as a child. Now in the Resources Panel, create a new "Graph Empty" material, set the new Screen Image material to this new material, and then open the material in the Material Editor. All you should see is just a single "Shader" node.
 
-Our approach here is going to be taking some input image (in our case the Device Camera Texture), turning it into a simple black and white version of itself, and then layering it on top of our background that we previously setup. To do all this, I am going to use a similar approach as in [my Tritone Material](https://learn.arbootcamp.com/snapchat-intermediate/tritone-material) to threshold the image by how light or dark it is, except before I do that I am going to slightly blur the image to get smoother edges. Let's walk through this.
+Our approach here is going to be taking some input image (in our case the Device Camera Texture), turning it into a simple black and white version of itself, and then layering it on top of our background that we previously setup. To do all this, I am going to use a similar approach as in [my Tritone Material](https://arbootcamp.com/snapchat-intermediate/tritone-material) to threshold the image by how light or dark it is, except before I do that I am going to slightly blur the image to get smoother edges. Let's walk through this.
 
 ### Adding the blur
 

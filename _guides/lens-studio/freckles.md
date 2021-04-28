@@ -11,7 +11,7 @@ There are a few different ways to make freckles in Lens Studio.
 
 ## Using the face mesh
 
-One of the easiest ways to create freckles is to use the face mesh. All you have to do is download a guide image from the Lens Studio website, add your own design, and then apply it to the face mesh. [Read more about this technique here](https://learn.arbootcamp.com/snapchat-beginner/easy-freckles).
+One of the easiest ways to create freckles is to use the face mesh. All you have to do is download a guide image from the Lens Studio website, add your own design, and then apply it to the face mesh. [Read more about this technique here](https://arbootcamp.com/snapchat-beginner/easy-freckles).
 
 `youtube:OKTgCRxE_h0`
 
@@ -38,4 +38,3 @@ You can view this custom material in action here:
 You can also use a custom template and script to create your freckles. The advantage to this is that you can easily swap out multiple images and add some randomization, but it is tricky customizing the placement of each freckle.
 
 `youtube:ZJxt6f8PjpQ`
-
