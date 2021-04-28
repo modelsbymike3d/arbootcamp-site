@@ -25,7 +25,7 @@ glob("out/**/*.html", (err, res) => {
         </urlset>
     `;
 
-  fs.writeFileSync("out/sitemap.xml", sitemap);
+  fs.writeFileSync("out/sitemap.xml", sitemap.trim());
 });
 
 // (async () => {
