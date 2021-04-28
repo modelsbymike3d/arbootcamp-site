@@ -3,6 +3,7 @@ title: "How to get help with Lens Studio"
 metaTitle: "How to get help with Lens Studio"
 description: "Need more help? There are lots of great places to turn to."
 image: /images/tutorials/snapchat-beginner/getting_help/help_thumbnail.jpg
+path: snapchat-beginner/getting-help
 author: "Michael Porter"
 snapchat: "modelsbymike3d"
 instagram: "modelsbymike3d"

@@ -3,6 +3,7 @@ title: "Stencil effect in Lens Studio"
 metaTitle: "Stencil effect in Lens Studio"
 description: "Learn how to overlay yourself as a stencil in Lens Studio! This is a nice artistic look that does well when used in lenses."
 image: /images/tutorials/snapchat-intermediate/stencil-effect/thumbnail.jpg
+path: snapchat-intermediate/stencil-effect
 software: "Lens Studio"
 software_version: "3.3.3"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 In this tutorial we'll go over how to create a stencil effect in Lens Studio. You'll learn how to overlay a simplified version of the user on top of the background of your choosing. You can see an example of this by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=7ad78e067e9f440a9f46a06b4a7af82b&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for lens with a stencil effect](../../snapchat-intermediate/stencil-effect/snapcode.png)
+![Snapcode for lens with a stencil effect](/images/tutorials/snapchat-intermediate/stencil-effect/snapcode.png)
 
 ## The approach
 
@@ -61,13 +62,13 @@ Start by adding `Texture 2D Object Parameter`, `Screen UV Coord`, `Float Paramet
 
 > At very high Blur Strengths, you'll start to see some weird artifacts and duplicate images. If you need a higher strengthed blur, add the "Gauss Blur" post effect and work with that. It seems to work better for whatever reason. We won't need high blur strengths for this particular tutorial, but it is useful to know.
 
-![Setting up the Gaussian Blur](../../snapchat-intermediate/stencil-effect/blur-setup.jpg)
+![Setting up the Gaussian Blur](/images/tutorials/snapchat-intermediate/stencil-effect/blur-setup.jpg)
 
 ### Adding the threshold
 
 Now that we can blur our image, let's threshold it to get a two-toned image. Connect the output of the Gaussian Blur node into a `Luminance` node, send that to an `Is Greater` node, then finally into an `If/else` node and then into our Shader. For customizing our effect I'm also adding another float parameter for the threshold and two color parameters for the If/else. Once you connect all that, choose two different colors and adjust the value going into the Is Greater node. You should now have a two-color image in the Preview Panel. Upping the Blur Strength will smoothen out the edges, the Threshold will dictate how much of the image is one color vs the other, and then the two colors let you pick what ultimately gets overlayed. I recommend sticking with white for one color and starting with black for the other (but we'll be changing this color later to blend better with our background).
 
-![Creating the duotone effect](../../snapchat-intermediate/stencil-effect/duotone-setup.jpg)
+![Creating the duotone effect](/images/tutorials/snapchat-intermediate/stencil-effect/duotone-setup.jpg)
 
 ### Overlaying the effect
 
@@ -79,7 +80,7 @@ We have our stencil effect, but it is kinda harsh right now. Luckily there are a
 
 Something else that I find that helps is adding some noise to our stencil effect. Add `Random Noise`, `Multiply`, and `Mix` nodes. Set the scale of the noise to something like 1000x1000 and plug the UV coord node into the Seed of the noise, multiply it by our stencil output, and then mix that together with white using our stencil output as the Ratio. Then use that to blend with the background. Depending on your background, the noise may or may not help, but it is definitely worth trying.
 
-![Adding some noise to the stencil effect](../../snapchat-intermediate/stencil-effect/noise-setup.jpg)
+![Adding some noise to the stencil effect](/images/tutorials/snapchat-intermediate/stencil-effect/noise-setup.jpg)
 
 ## Finishing up
 

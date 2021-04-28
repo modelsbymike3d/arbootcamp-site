@@ -3,6 +3,7 @@ title: "Make your own color correction filters with LUTs"
 metaTitle: "Make your own color correction filters with LUTs"
 description: "Color correction filters using LUTs (lookup tables) are super popular. Color corrections can be used to enhance the look and feel of a complex lens, or they can be used as standalone filters. LUTs are usually created using Photoshop or Lightroom, but for this tutorial we will be using the freely available Photopea."
 image: /images/tutorials/snapchat-beginner/lut-color-correction/thumbnail.jpg
+path: snapchat-beginner/lut-color-correction
 software: "Lens Studio"
 software_version: "3.4.2"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 Color correction filters using LUTs (lookup tables) are super popular. Color corrections can be used to enhance the look and feel of a complex lens, or they can be used as standalone filters. LUTs are usually created using Photoshop or Lightroom, but for this tutorial we'll be using the freely available Photopea. You can preview an effect using a color correction by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=4baf3a20091049c9ab99539ab1d03a56&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for example lens with a color correction](../../snapchat-beginner/lut-color-correction/snapcode.png)
+![Snapcode for example lens with a color correction](/images/tutorials/snapchat-beginner/lut-color-correction/snapcode.png)
 
 ## What is a LUT?
 
@@ -39,7 +40,7 @@ Applying our color corrections only to the base lookup table is not ideal becaus
 
 Open up [Photopea](https://www.photopea.com/) and create a New Project. Photopea won't be able to save your work (unless you pay to upgrade), but you can export the Photoshop file (.psd) and import it later if you ever need to make changes - be sure to always export your edits before closing Photopea. The size of the project don't really matter, you just want to have enough room for your reference images. I went with a width of 3000 and height of 1440. Once you've created the project, go to `File -> Open & Place` and select all your reference images and the base lookup table. Use the Move tool (you may need to enable the Transform controls) to arrange all your reference images. Place the base lookup table in the top left and do not resize it - this will make our lives easier in a bit.
 
-![Loading reference images into Photopea](../../snapchat-beginner/lut-color-correction/photopea-reference-images.jpg)
+![Loading reference images into Photopea](/images/tutorials/snapchat-beginner/lut-color-correction/photopea-reference-images.jpg)
 
 ## Make your adjustments
 
@@ -47,7 +48,7 @@ To create our LUT, we are going to use Adjustment Layers. An adjustment layer is
 
 To add an adjustment layer, click the half-filled circle icon beneath the Layers panel. You won't want to use any of the "Fills" at the top of the menu, but basically anything else can be used to create your LUT. Explore the various types of adjustment layers and play around with their various properties, blend mode, and opacity. The great thing about the adjustment layers is that they affect everything below them, so you will see your changes applied to all the reference images you imported. If you aren't seeing this, make sure your adjustment layers are at the top of the layer list in the Layers panel.
 
-![Our adjustment layers](../../snapchat-beginner/lut-color-correction/adjustment-layers.jpg)
+![Our adjustment layers](/images/tutorials/snapchat-beginner/lut-color-correction/adjustment-layers.jpg)
 
 ## Exporting the LUT
 
@@ -55,13 +56,13 @@ Now that we have our finished effect, it is time to export. First things first, 
 
 Start off by selecting all the adjustment layers and the layer with the base lookup table in the Layers panel and then click on the folder icon down at the bottom. This will put all the adjustment layers and the base lookup table in a folder.
 
-![Bundling our adjustment layers and base lookup table in a folder](../../snapchat-beginner/lut-color-correction/create-folder.jpg)
+![Bundling our adjustment layers and base lookup table in a folder](/images/tutorials/snapchat-beginner/lut-color-correction/create-folder.jpg)
 
 Right click on the folder and select "Duplicate Layer" and then right click on the new copy and select "Convert to Smart Object." The smart object bundles all our adjustment layers with our base lookup table. Now that we have the smart object, double click on the layer thumbnail in the Layers panel.
 
 After double clicking on our smart object, we will now have a brand new project with our base lookup table up in the corner. If you look in the Layers panel you will see a folder containing the adjustment layers and the base LUT. All we have to do now is resize our image. Go to `Image -> Canvas Size` and set the width to 256 and the height to 16. In the Anchor box click on the top left corner and then click OK.
 
-![Resizing our canvas to fit the base lookup table](../../snapchat-beginner/lut-color-correction/canvas-resize.jpg)
+![Resizing our canvas to fit the base lookup table](/images/tutorials/snapchat-beginner/lut-color-correction/canvas-resize.jpg)
 
 Now that our image is the right size, go to `File -> Export as -> PNG` to save your LUT! Make sure you export as PNG, otherwise you may have issues inside Lens Studio.
 
@@ -71,7 +72,7 @@ If we go back to the original file with our reference images and adjustments, yo
 
 Head on over to Lens Studio and import your exported LUT. In the Objects Panel, add a Color Correction and select "Empty" (technically you can add any color correction). Swap out the Texture on the color correction for your imported LUT and you are good to go! You can adjust the strength of your LUT by adjusting the Alpha slider on the color correction. Go through the various preview videos as one last check to make sure your LUT looks good and you are all set!
 
-![Using our custom LUT](../../snapchat-beginner/lut-color-correction/lut-settings.jpg)
+![Using our custom LUT](/images/tutorials/snapchat-beginner/lut-color-correction/lut-settings.jpg)
 
 ## Further reading
 

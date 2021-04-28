@@ -3,6 +3,7 @@ title: "Super easy freckles in Lens Studio"
 metaTitle: "Super easy freckles in Lens Studio"
 description: "Learn how to easily add freckles to the user's face using the Face Mesh!"
 image: /images/tutorials/snapchat-beginner/easy_freckles/freckles_thumbnail.jpg
+path: snapchat-beginner/easy-freckles
 software: "Lens Studio"
 software_version: "3.1"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 In this tutorial we'll go over how to easily create freckles. You can preview this effect by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=67fa25dccb5d4936855685b61101fe17&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for example virtual background lens](../../snapchat-beginner/easy_freckles/snapcode.svg)
+![Snapcode for example virtual background lens](/images/tutorials/snapchat-beginner/easy_freckles/snapcode.svg)
 
 ## Creating the freckles
 

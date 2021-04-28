@@ -3,6 +3,7 @@ title: "Create an adjustable background blur/bokeh effect with Lens Studio"
 metaTitle: "Create an adjustable background blur/bokeh effect with Lens Studio"
 description: "It's not too hard to add a blurry background to your Snapchat lenses for that portrait effect. But let's take it to the next level and make it adjustable!"
 image: /images/tutorials/snapchat-intermediate/background-blur/thumbnail.jpg
+path: snapchat-intermediate/adjustable-background-blur
 software: "Lens Studio"
 software_version: "3.3.1"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 In this Lens Studio tutorial we'll go over how to add an adjustable background blur (or "bokeh" as it is sometimes called, although it technically isn't bokeh in our case) to a lens. We'll go over how to apply the blur to just the background, add a slider to let the user adjust the strength of the blur, as well as how you can layer post effects on top of the completed lens. You can see an example of this type of effect by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=fad8f8091cda47cb942aa385e6da588c&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for lens with adjustable background blur](../../snapchat-intermediate/background-blur/snapcode.png)
+![Snapcode for lens with adjustable background blur](/images/tutorials/snapchat-intermediate/background-blur/snapcode.png)
 
 ## Blurring the background
 
@@ -31,7 +32,7 @@ So far we have a blur going on, but our subject is also blurry. Add a Screen Ima
 
 To do this, start by creating a new Unlit material. Select the material and set the Device Camera Texture as the Base Texture. Now enable the Opacity Texture option. If there is not an option to select a texture, change the Blend Mode of the material to Normal. Then select the segmentation texture for the opacity texture.
 
-![Setting up the Unlit material with the segmentation](../../snapchat-intermediate/background-blur/unlit-material-setup.jpg)
+![Setting up the Unlit material with the segmentation](/images/tutorials/snapchat-intermediate/background-blur/unlit-material-setup.jpg)
 
 Now select the screen image and set the material to be our unlit material we just finished setting up. The default Stretch Mode of Fit should be fine, but I like to change mine to Stretch just to be safe and make sure the image fills the screen. You may notice that ther person is blurry now instead of the background, so select the Portrait Background Segmentation in the Resources Panel and select the "Invert Mask" option in the Inspector Panel. Now you should be golden! Since the default preview videos have a plain background, I recommend you push the lens to your device so you can really see it in action.
 
@@ -41,7 +42,7 @@ So we have a blurry background, but how blurry should it be? Very blurry, somewh
 
 Instead of reinventing the wheel, let's use the [Lens Studio User Interface (UI) system](https://lensstudio.snapchat.com/guides/scripting/helper-scripts/user-interface/) that they've kindly created! Just underneath the Overview section there will be a link to download it. Go ahead and download the zip file and then unzip it. Now from inside Lens Studio, import the `UI_Widgets.lso` file you just unzipped. This should add a "UI" folder of goodies in the Resources Panel and you should see something that says "\[Place Under Orthographic Camera\]" in the Objects Panel, but don't do anything with it just yet.
 
-![Importing the Lens Studio UI widgets](../../snapchat-intermediate/background-blur/ui-import.jpg)
+![Importing the Lens Studio UI widgets](/images/tutorials/snapchat-intermediate/background-blur/ui-import.jpg)
 
 ## Creating a UI render target
 
@@ -58,7 +59,7 @@ While we want the user to be able to see and use the slider, we don't want it to
 
 Okay, that was a lot, and while doing all that you may have noticed some buttons and sliders show up on the screen. So what we did was create a new camera to hold our UI. We made sure it was the right camera type (Orthographic) and for the camera input choose our Render Target (which is our final effect). Now go ahead and grab that "\[Place Under Orthographic Camera\]" object and attach it to the UI camera. Now there should be a slider on the left and some buttons in the middle.
 
-![Setting up the user interface camera](../../snapchat-intermediate/background-blur/ui-cam-settings.jpg)
+![Setting up the user interface camera](/images/tutorials/snapchat-intermediate/background-blur/ui-cam-settings.jpg)
 
 ## Tweaking the user interface
 
@@ -66,7 +67,7 @@ We want to adjust the strength of the blur, so the only UI widget that we need i
 
 We also want to get rid of the color scale from the slider because we are adjusting blur strength, not color. Let's expand everything inside that UI Color Picker and see what we have; take a moment to look around and see how it's all structured. One thing we won't need is the UI Popup. The UI Popup appears when the slider is being dragged and displays the current color off to the side. We won't need that, so you can disable or delete it. We also don't need the color displayed on the cursor. If you expand the Cursor object, you'll see a Background and a Color Visual object. You can disable or delete the Color Visual. The last thing we need to remove is the color scale. However, if we disable the Palette object, you'll notice that the cursor disappears too. Drag the Cursor outside of the Palette object and parent it to the Background object. Now you can disable the Palette object. Don't delete it because it seems to mess with the UI scripts and the cursor no longer slides, but go ahead and disable it. This will result in a partially transparent black background for the slider with a white circle for the cursor. Feel free to swap out those textures with whatever you wish if you want to customize the look of your slider.
 
-![Setting up the slider widget](../../snapchat-intermediate/background-blur/slider-setup.jpg)
+![Setting up the slider widget](/images/tutorials/snapchat-intermediate/background-blur/slider-setup.jpg)
 
 ## Connecting the slider to the blur
 
@@ -114,7 +115,7 @@ changeBlur(script.initialVal);
 
 How does this work? For our inputs we take the color picker script, our blur material, and a few float values. The `changeBlur` function takes our slider value and multiplies it by our multiplier to set the blur strength. But what is that `script.blurMat.mainPass.blurFactor` nonsense going on? The first part is straightforward, `script.blurMat` is how we access the material we specified in our script inputs. The `mainPass` part is how we access properties of the material, but where does `blurFactor` come from? The Blur Factor is a configurable input for the material, and if you take a look at the material in the Inspector Panel and hover your mouse over a parameter, you can see the Property name which is how you access that value from a script.
 
-![How to find the names of material properties](../../snapchat-intermediate/background-blur/material-property.jpg)
+![How to find the names of material properties](/images/tutorials/snapchat-intermediate/background-blur/material-property.jpg)
 
 The next portion of our script attaches our `changeBlur` function to the callback. This is just telling the color picker script that whenever the slider value changes that the specified function needs to be run. After that we position our slider at the initial value and make sure to set our blur to the same value.
 
@@ -126,7 +127,7 @@ Now that the background blur is working, your lens just requires your finishing 
 
 > With the current setup the post effect might only be visible on the live target but not the capture target. You may need to place the UI camera (and all the elements underneath it) on a [new layer](https://lensstudio.snapchat.com/guides/general/camera/). I go over this step in more detail in the video version of the tutorial.
 
-![Example post effect compatible with the background blur and user interface widgets](../../snapchat-intermediate/background-blur/example-post-effect.jpg)
+![Example post effect compatible with the background blur and user interface widgets](/images/tutorials/snapchat-intermediate/background-blur/example-post-effect.jpg)
 
 ## Further reading
 

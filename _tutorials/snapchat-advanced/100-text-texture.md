@@ -3,6 +3,7 @@ title: "Add dynamic text directly to 3D objects in Lens Studio"
 metaTitle: "Add dynamic text directly to 3D objects in Lens Studio"
 description: "Text components and screen text are well known features of Lens Studio. The text texture, however, is lesser known but is a super powerful feature. With the text texture, you can add dynamic text directly to the surface of a 3D object."
 image: /images/tutorials/snapchat-advanced/text-texture/thumbnail.jpg
+path: snapchat-advanced/text-texture
 software: "Lens Studio"
 software_version: "3.2"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 Text components and screen text are well known features of Lens Studio. The text texture, however, is lesser known but is a super powerful feature. With the text texture, you can add dynamic text directly to the surface of a 3D object and this tutorial will show you how. You can see an example of this by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=7a5cfc849edd49e3ba43d099b44746dc&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for lens with 3D text](../../snapchat-advanced/text-texture/snapcode.png)
+![Snapcode for lens with 3D text](/images/tutorials/snapchat-advanced/text-texture/snapcode.png)
 
 ## Prepare your 3D object
 
@@ -30,21 +31,21 @@ The text texture in Lens Studio is treated as an image texture, and in order to 
 - Scale the faces in the UV map as desired
 - Export your object and import into Lens Studio
 
-![Setting up the second UV map to receive the text texture](../../snapchat-advanced/text-texture/uv-setup.jpg)
+![Setting up the second UV map to receive the text texture](/images/tutorials/snapchat-advanced/text-texture/uv-setup.jpg)
 
 ## Apply the text texture to your object
 
 Heading into Lens Studio, create a Text Texture if you haven't already (in the Resources Panel) and give it some sample text. You also need to make sure your text material is setup. It can be as simple as an Unlit material, or it can be a custom material made with the Material Editor. Assign the material texture to the text texture and then select your model, find the material to be replaced, and replace it with your new material.
 
-![Simple graph material for the text texture](../../snapchat-advanced/text-texture/simple-material-setup.jpg)
+![Simple graph material for the text texture](/images/tutorials/snapchat-advanced/text-texture/simple-material-setup.jpg)
 
 At this point you should see something changed on your 3D model, but we aren't quite finished yet. Currently the text texture material is using the original UV map of the object and so it won't look right. We need to switch that to the second UV map we created. If you are using the material editor you'll need to swap out the "Surface UV Coord 0" for "Surface UV Coord 1," and if you are using a non-graph material you'll need to set the texture UV to "Mesh UV 1." Now you'll be able to see your text, but there'll be empty space around the words. Let's fix that. With the 3D object selected, add another material slot and select the regular material for the object. Then click on the three small dots to the left of the material name and drag it above the text material. Provided your text is a different color than the background behind it, you should now see your text.
 
-![Adding both materials to the 3D object](../../snapchat-advanced/text-texture/material-ordering.jpg)
+![Adding both materials to the 3D object](/images/tutorials/snapchat-advanced/text-texture/material-ordering.jpg)
 
 The last issue you might notice is the text and the base material are clashing with each other and flickering over the top of each other. To solve that issue, select your text material and disable "Depth Test" in the Inspector Panel. Now you are good to go!
 
-![Disabling Depth Test for the material](../../snapchat-advanced/text-texture/depth-test.jpg)
+![Disabling Depth Test for the material](/images/tutorials/snapchat-advanced/text-texture/depth-test.jpg)
 
 ## Text texture caveats
 

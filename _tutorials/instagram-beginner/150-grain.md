@@ -3,6 +3,7 @@ title: "How to add grain to your Instagram and Facebook filters"
 metaTitle: "How to add grain to your Instagram and Facebook filters"
 description: "Film grain is a popular feature of filters, and fortunately it is easy to add to your own using some free resources."
 image: /images/tutorials/instagram-beginner/grain/grain-thumbnail.jpg
+path: instagram-beginner/grain
 software: "Spark AR Studio"
 software_version: "v98"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 Grain is a pretty popular addition to many Instagram filters. Done right, it can add a vintage look to your filter. In this Spark AR tutorial, you will learn how to add grain to your Instagram and Facebook filters. You can see an example of this effect in action [by clicking here](https://www.instagram.com/ar/387717252389876/) or by scanning the below code.
 
-![QR code leading to an example freckles effect for Instagram](../../instagram-beginner/grain/qr_code.png)
+![QR code leading to an example freckles effect for Instagram](/images/tutorials/instagram-beginner/grain/qr_code.png)
 
 ## Getting grain images
 
@@ -41,7 +42,7 @@ To convert my 50% range to a 100% range, I am going to use the [From Range patch
 
 You now have a grain effect!
 
-![How to connect the patches](../../instagram-beginner/grain/patches.jpg)
+![How to connect the patches](/images/tutorials/instagram-beginner/grain/patches.jpg)
 
 ## Further reading
 

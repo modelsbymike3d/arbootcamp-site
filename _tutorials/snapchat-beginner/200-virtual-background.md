@@ -3,6 +3,7 @@ title: "Tap to change the background in Lens Studio"
 metaTitle: "Tap to change the background in Lens Studio"
 description: "Learn how to add a virtual background or green screen effect to your lenses using segmentation!"
 image: /images/tutorials/snapchat-beginner/virtual_background/virtual_background_thumbnail.jpg
+path: snapchat-beginner/virtual-background
 software: "Lens Studio"
 software_version: "3.1"
 author: "Michael Porter"
@@ -17,15 +18,15 @@ homepage: "https://modelsbymike3d.com"
 
 In this Lens Studio tutorial we'll go over how to create a virtual background or green screen effect for your Snapchat lenses. You can preview this effect by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=2e313553d72344058cefe02ba6f3b4ec&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for example virtual background lens](../../snapchat-beginner/virtual_background/snapcode.png)
+![Snapcode for example virtual background lens](/images/tutorials/snapchat-beginner/virtual_background/snapcode.png)
 
 ## Setting up the scene
 
 For this effect we are going to start with a blank project. We don't need too much to create this effect. Start by adding a [Screen Image](https://lensstudio.snapchat.com/guides/2d/image/) in the Objects panel and then a [Portrait Background Segmentation Texture](https://lensstudio.snapchat.com/guides/general/segmentation/) in the Resources Panel.
 
-![Adding the screen image](../../snapchat-beginner/virtual_background/add_screen_image.jpg)
+![Adding the screen image](/images/tutorials/snapchat-beginner/virtual_background/add_screen_image.jpg)
 
-![Adding the portrait background segmentation texture](../../snapchat-beginner/virtual_background/add_segmentation.jpg)
+![Adding the portrait background segmentation texture](/images/tutorials/snapchat-beginner/virtual_background/add_segmentation.jpg)
 
 Things are going to look a little weird now over in the preview panel. When we add a screen image, Snapchat adds a placeholder image to let us know it is there and ready for us to edit. For this lens I am going to use space backgrounds, but feel free to use whatever you want. [Pixabay](https://pixabay.com/) is a great place to find free-to-use images. Head on over and download 3-4 images that you like. Keep in mind that our lens has an overall size limit of 4 MB, so we need to be conscious of image size. Fortunately Pixabay provides each image in several different resolutions, so when you download each image, try to find a size around 1280x720. This strikes a good balance between image quality and file size. Once you have your images, [import them](https://lensstudio.snapchat.com/guides/general/importing-and-updating-resources/) using the Resources Panel.
 
@@ -35,7 +36,7 @@ Now that we have our images downloaded and our scene elements added, let's get t
 
 Go ahead and click on the Screen Image, and then over in the Inspector Panel, click on the Texture box and choose one of the images you added. You should now see your image overlaid in the preview.
 
-![Setting the screen image texture](../../snapchat-beginner/virtual_background/setting_image.jpg)
+![Setting the screen image texture](/images/tutorials/snapchat-beginner/virtual_background/setting_image.jpg)
 
 You'll notice that the image doesn't fill the whole screen, nor is the person fully visible. Let's fix that. A few rows beneath where we set the screen image texture you'll see a dropdown for the [stretch mode](https://lensstudio.snapchat.com/guides/2d/image/). The default stretch mode is "Fit" which ensures our entire image is visible without stretching it in any direction. We are going to change it to "Fill" so that the entire screen is filled. The Fill mode will scale the image without causing any stretching. As an added bonus, it will work on any screen size, so even if someone uses this lens in [Snap Camera](https://snapcamera.snapchat.com/) on the desktop, our virtual background will look good and have no distortion.
 
@@ -72,7 +73,7 @@ To change our background, we need to tell Lens Studio what image we want to chan
 
 Let's break this down. Component.Image is going to refer to our Screen Image that we added. The Asset.Texture[] part is going to let us input a list of images - the `[]` part means we'll be inputting a list rather than just a single item. This will be a little easier to understand in just a moment. Hit `ctrl-s` or `cmd-s` to save the script, then click on the Orthographic Camera again and look at the script component we added in the Inspector Panel. You'll now see a box to specify a Background image and a place to add values to our Images list. Go ahead and select the Screen Image for the background and your various images for the Images list.
 
-![Setting the script inputs](../../snapchat-beginner/virtual_background/script_inputs.jpg)
+![Setting the script inputs](/images/tutorials/snapchat-beginner/virtual_background/script_inputs.jpg)
 
 ### Detecting taps
 

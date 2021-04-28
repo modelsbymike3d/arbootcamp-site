@@ -3,6 +3,7 @@ title: "Create customizable 3D text in Lens Studio"
 metaTitle: "Create customizable 3D text in Lens Studio"
 description: "Lens Studio does not have native 3D text, but we can still fake the effect with some pretty convincing results! Learn how to use the Text Texture resource and a little scripting to create this effect!"
 image: /images/tutorials/snapchat-intermediate/3d-text/3d_text_thumbnail.jpg
+path: snapchat-intermediate/3d-text
 software: "Lens Studio"
 software_version: "3.1"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 In this tutorial we'll go over how to create 3D text inside of Lens Studio. You can see an example of this by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=e8090cbca14843d2875638c04fc605b9&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for lens with 3D text](../../snapchat-intermediate/3d-text/snapcode.png)
+![Snapcode for lens with 3D text](/images/tutorials/snapchat-intermediate/3d-text/snapcode.png)
 
 ## Inspiration
 

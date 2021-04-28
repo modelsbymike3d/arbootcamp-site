@@ -3,6 +3,7 @@ title: "Create your very first Snapchat lens in 10 minutes"
 metaTitle: "Create your very first Snapchat lens in 10 minutes"
 description: "There's no better way to learn lens making than by doing! Get started with Lens Studio by making your very first lens!"
 image: /images/tutorials/snapchat-beginner/first_lens/first_lens_thumbnail.jpg
+path: snapchat-beginner/your-first-lens
 software: "Lens Studio"
 software_version: "3.0"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 For your very first lens we'll be making a face stretch lens. It's easy to get started and you can create some really fun effects. You can preview this effect by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=62e54d7fb96d47da95ed6b33ce5e0ef8&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for example face stretch lens](../../snapchat-beginner/first_lens/snapcode.png)
+![Snapcode for example face stretch lens](/images/tutorials/snapchat-beginner/first_lens/snapcode.png)
 
 ## Before you begin
 
@@ -31,7 +32,7 @@ When you first open Lens Studio, you'll be greeted by the welcome screen. Feel f
 
 For a basic [face stretch](https://lensstudio.snapchat.com/guides/face/face-effects/face-stretch/) lens, the setup is pretty simple. In the [Objects panel](https://lensstudio.snapchat.com/guides/general/panels/) at the top left, click on the little "+" button and either scroll down or search for "Face Stretch" and then add it.
 
-![Adding the face stretch](../../snapchat-beginner/first_lens/add_face_stretch.jpg)
+![Adding the face stretch](/images/tutorials/snapchat-beginner/first_lens/add_face_stretch.jpg)
 
 ## Stretching the face
 
@@ -45,7 +46,7 @@ Now all you have to do is move the points around until you're happy with the res
 
 Over on the right in the [Preview panel](https://lensstudio.snapchat.com/guides/general/previewing-your-lens/), if you look where it says "Idle Person 1" at the top, you can click that to select different people and facial expressions to make sure everything is looking good.
 
-![Face stretch control points](../../snapchat-beginner/first_lens/control_points.jpg)
+![Face stretch control points](/images/tutorials/snapchat-beginner/first_lens/control_points.jpg)
 
 ## Submitting your lens
 
@@ -55,13 +56,13 @@ Before we can submit, there are a few things we need - a lens name, an icon, and
 
 Now click on the ["Project Info"](https://lensstudio.snapchat.com/guides/submission/configuring-project-info/) button up at the top left of Lens Studio. Give your lens a creative, catchy name. On the left side of the window, there will be a rectangular area and a circular area. Click in the circular area to set the icon. Choose the screenshot we just took and adjust the crop to your liking. Hit apply and then do the same for the preview. Lens Studio will automatically apply your effect to all the preview videos, so you just need to scroll through and choose one that you like.
 
-![Project info panel](../../snapchat-beginner/first_lens/project_info.jpg)
+![Project info panel](/images/tutorials/snapchat-beginner/first_lens/project_info.jpg)
 
 Once all the project info is added, now you are ready to submit your lens. Click on the ["Publish Lens"](https://lensstudio.snapchat.com/guides/submission/submitting-your-lens/) button up at the top left. Add up to eight (8) descriptive tags to help people find your lens, and then for scan triggers go ahead and add "Person" as an option. Your preview will have been automatically added, so now you just need to hit that "Submit" button!
 
 > As of Lens Studio 3.3, hitting the "Publish Lens" button will upload your lens and then open up your web browser. The overall process is the same, it just takes place through your browser rather than through Lens Studio.
 
-![Submit lens panel](../../snapchat-beginner/first_lens/submit_lens.jpg)
+![Submit lens panel](/images/tutorials/snapchat-beginner/first_lens/submit_lens.jpg)
 
 ## Sharing your lens
 

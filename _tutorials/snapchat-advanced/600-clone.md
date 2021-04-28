@@ -3,6 +3,7 @@ title: "Recreate the Clone Photos filter from TikTok using Lens Studio"
 metaTitle: "Recreate the Clone Photos filter from TikTok using Lens Studio"
 description: "The more the merrier. More is always better. These wise words of wisdom have been handed down for generations, and now you can bring them to pass inside Snapchat. Here you will learn how to exactly recreate my viral cloning lens. Just make sure you change it up a bit so we do not get caught ;)"
 image: /images/tutorials/snapchat-advanced/clone/thumbnail.jpg
+path: snapchat-advanced/clone
 software: "Lens Studio"
 software_version: "3.4"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 The more the merrier. More is always better. These wise words of wisdom have been handed down for generations, and now you can bring them to pass inside Snapchat. Here in this tutorial you will learn how to exactly recreate my viral cloning lens. Just make sure you change it up a bit so we don't get caught ;) The key to this effect is the new full-body segmentation which was recently introduced in Lens Studio 3.4 along with a little scripting. You can see an example of this by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=6eadcd01503341e88c7e710eea02095c&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for lens with 3D text](../../snapchat-advanced/clone/snapcode.png)
+![Snapcode for lens with 3D text](/images/tutorials/snapchat-advanced/clone/snapcode.png)
 
 ## Overview
 
@@ -65,19 +66,19 @@ script.createEvent("TapEvent").bind(function () {
 
 Here we import a script component and the number of clones we want. Then when there is a tap event, we call the `triggerClones` function of the imported script. In our case this will call the `startCloning` function with the number of clones we want. Scripting wise this is all we'll need for the helper script, so now add it to the screen text representing the first choice. For the number of clones I am going with "1" and for the controller input I am selecting my main script. If you now click in the preview window, you'll see the value you specified for the "Number Of Clones" input printed out in the logger panel. We've added quite a bit so far, but we still aren't quite ready for the cloning portion. But almost.
 
-![Setting up the helper script on the choices](../../snapchat-advanced/clone/helper-script-setup.jpg)
+![Setting up the helper script on the choices](/images/tutorials/snapchat-advanced/clone/helper-script-setup.jpg)
 
 One issue you may have noticed is that our main script is printing out the number of clones regardless of where we tap on the screen. We want to make sure our function is only triggered when an answer choice is tapped. Add a Touch Component to the first answer choice, select the Orthographic Camera for the Camera input, and then set the Min Touch Size to something like 0.2. If that value is too small, the taps won't register. If it is too large, then tapping elsewhere on the screen can still trigger it. A value of 0.2 works well for me. Now if you click on the first choice, the number of clones should be printed in the logger. If you tap elsewhere, nothing will be printed out.
 
 Now that we have our script and touch components added to our first choice, go ahead and duplicate it a few times. With each copy, you just need to change the text that is displayed along with the "Number Of Clones" input on the helper script.
 
-![Finished UI setup for the options for the number of clones to create](../../snapchat-advanced/clone/ui-setup.jpg)
+![Finished UI setup for the options for the number of clones to create](/images/tutorials/snapchat-advanced/clone/ui-setup.jpg)
 
 ## A place for the clones
 
 Now that we have our base UI and scripts created, it's almost time for the actual clones! We'll use our script to create the clones, but before we can do that we need a place to display the clones. Deselect everything in the objects panel (you can click in a blank space in the objects panel to do so) and add a new Screen Image. This should add a new orthographic camera as well. Alternatively you can add a new camera/screen image manually. I'm going to rename this camera to "Clone Cam" to help stay organized. I'll also drag it above the other orthographic camera (the one for the UI) and then make sure it is rendered before the UI render target in the scene config by dragging it up by the original camera. This helps me keep track of everything a little better.
 
-![Creating and ordering the multiple cameras](../../snapchat-advanced/clone/camera-ordering.jpg)
+![Creating and ordering the multiple cameras](/images/tutorials/snapchat-advanced/clone/camera-ordering.jpg)
 
 Make sure the Full Frame Region is set to "Full Frame," set your image stretch mode to "Stretch," and then rename the screen image to "1" or something. This will be where our first clone goes. Go ahead and copy that screen image so that you have enough for all the potential clones (in this case, we want five total). Then copy it once more and rename this one to "Overlay." The preview panel should now be covered by the placeholder images, but we'll take care of that soon.
 
@@ -98,7 +99,7 @@ Head back to the main script (not the helper script we added to the UI choices) 
 
 Save your script then find it in the objects panel. Go ahead and select the inputs.
 
-![Setting the inputs for our cloning script](../../snapchat-advanced/clone/script-inputs.jpg)
+![Setting the inputs for our cloning script](/images/tutorials/snapchat-advanced/clone/script-inputs.jpg)
 
 First we will use a loop to make sure all the screen images for the clones are disabled. We can manually disable them in the objects panel, but doing it in the script ensures they always start disabled (in case we forget to disable them manually). Next we are going to create a function we can call to create the clones. We are going to pass in which number clone we are on, [freeze the camera texture](https://lensstudio.snapchat.com/api/classes/Texture/) and the segmentation texture, and apply those to the corresponding material and activate the screen image. Our script should now look like the following:
 

@@ -3,6 +3,7 @@ title: "Add disappearing messages to your Snapchat lenses"
 metaTitle: "Add disappearing messages to your Snapchat lenses"
 description: "Learn how to add your username to a lens and make it disappear automatically!"
 image: /images/tutorials/snapchat-beginner/credits/credits_thumbnail.jpg
+path: snapchat-beginner/lens-credits
 software: "Lens Studio"
 software_version: "3.1"
 author: "Michael Porter"
@@ -29,7 +30,7 @@ When you added the Screen Text, you may have noticed that it was nested undernea
 
 When the Tween Manager is added to a scene, it brings along a bunch of examples. Find the Tween Manager in the Objects Panel and delete all the examples nested under it. If your Behavior script got nested under the Tween Manager, make sure to leave that. Move the Tween Manager to the top of the scene hierarchy and rename the Behavior script to something like 'Credits.' Your setup should look something like the below image.
 
-![Scene setup in the Objects Panel for adding disappearing credits to a lens](../../snapchat-beginner/credits/scene_setup.jpg)
+![Scene setup in the Objects Panel for adding disappearing credits to a lens](/images/tutorials/snapchat-beginner/credits/scene_setup.jpg)
 
 ### The behavior script
 
@@ -42,7 +43,7 @@ Our first task will be to make sure our lens credits are never visible while the
 
 We'll still be adding the fade-out effect, but this behavior script makes sure that if the user takes a snap before the credits have faded out that they aren't present in the captured image/video.
 
-![Behavior script setup for disabling an object when recording starts](../../snapchat-beginner/credits/behavior_script.jpg)
+![Behavior script setup for disabling an object when recording starts](/images/tutorials/snapchat-beginner/credits/behavior_script.jpg)
 
 ### Fading out with tweens
 
@@ -57,7 +58,7 @@ Underneath the script options we just set for the Behavior script, click the 'Ad
 
 A fun example to try would be a `Time` value of 0.3, a `Delay` of 3.0, and an `Easing Function` of Bounce. This gives a nice flickering out effect, but feel free to try out different easing functions, times, and delays to find what suits your lens best.
 
-![Tween script setup for fading out an object after some amount of time](../../snapchat-beginner/credits/tween_script.jpg)
+![Tween script setup for fading out an object after some amount of time](/images/tutorials/snapchat-beginner/credits/tween_script.jpg)
 
 ## Further reading
 

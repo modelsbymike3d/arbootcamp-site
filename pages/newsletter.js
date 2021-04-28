@@ -7,6 +7,7 @@ import { getPages } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import H1 from "../components/h1";
+import Seo from "../components/seo";
 
 const Tile = (post, index) => {
   return (
@@ -24,9 +25,11 @@ export default function Newsletter({ allPosts }) {
   return (
     <>
       <Layout>
-        <Head>
-          <title>AR Bootcamp Newsletter</title>
-        </Head>
+      <Seo
+          title={"AR Bootcamp | Newsletter"}
+          description={`Stay up-to-date with augmented reality on Snapchat, Instagram, and Facebook! The AR Bootcamp newsletter is brought to you by me, Mike, and I'll be sharing my tips, tricks, thoughts, and ramblings on social AR.`}
+          path={"newsletter"}
+        />
         <Container>
           <div className="text-black">
             <div className="flex flex-col  ">

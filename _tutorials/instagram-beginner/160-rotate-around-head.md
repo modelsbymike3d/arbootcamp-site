@@ -3,6 +3,7 @@ title: "Make objects rotate around the head in Spark AR"
 metaTitle: "Make objects rotate around the head in Spark AR"
 description: "In this Spark AR tutorial you will learn that making objects rotate around the head is super easy to do. All it takes is a little scene setup and the click of a button."
 image: /images/tutorials/instagram-beginner/rotate-around-head/thumbnail.jpg
+path: instagram-beginner/rotate-around-head
 software: "Spark AR Studio"
 software_version: "v109"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 In this Spark AR tutorial you'll learn that making objects rotate around the head is super easy to do. All it takes is a little scene setup and the click of a button. You can see an example of this effect in action [by clicking here](https://www.instagram.com/ar/1393628470978921/) or by scanning the code below.
 
-![QR code leading to an example effect for Instagram with objects rotating around the head](../../instagram-beginner/rotate-around-head/qr-code.png)
+![QR code leading to an example effect for Instagram with objects rotating around the head](/images/tutorials/instagram-beginner/rotate-around-head/qr-code.png)
 
 ## Setting up the scene
 
@@ -25,13 +26,13 @@ Let's start by importing a couple things down in the Assets Panel. The first thi
 
 Next up I'm going to add a Face Tracker and a Null Object to my scene. Drag the "headOccluder" from the Assets Panel up to the face tracker and then nest the "nullObject0" under the face tracker and below the head occluder. Adjust the position of the null object to where you want the center of rotation to be and then adjust the position of your nested 3D object
 
-![Scene setup for rotating objects around the head in Spark AR](../../instagram-beginner/rotate-around-head/scene-setup.jpg)
+![Scene setup for rotating objects around the head in Spark AR](/images/tutorials/instagram-beginner/rotate-around-head/scene-setup.jpg)
 
 ## Add the rotation
 
 Select the null object, and then way over in the top right of Spark AR click on "Actions," go to "Animate," and then select "Spin." This will open up the patch editor and your object should now start spinning. You can adjust the speed of the rotation by changing the "Duration" value on the Loop Animation patch. You can add as many 3D objects as you want to the scene and they will also rotate if they are parented to the null object.
 
-![Patch setup for rotating objects around the head in Spark AR](../../instagram-beginner/rotate-around-head/patch-setup.jpg)
+![Patch setup for rotating objects around the head in Spark AR](/images/tutorials/instagram-beginner/rotate-around-head/patch-setup.jpg)
 
 ## Further reading
 

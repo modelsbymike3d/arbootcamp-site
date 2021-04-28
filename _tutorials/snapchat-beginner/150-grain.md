@@ -3,6 +3,7 @@ title: "Quicky and easily add grain to your Snapchat lenses"
 metaTitle: "Quicky and easily add grain to your Snapchat lenses"
 description: "Film grain is a popular feature of lenses, and fortunately it is easy to add to your own."
 image: /images/tutorials/snapchat-beginner/grain/grain-thumbnail.jpg
+path: snapchat-beginner/grain
 software: "Lens Studio"
 software_version: "3.1"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 Grain is a pretty popular addition to many Snapchat lenses. Done right, it can add a vintage look to your lenses. This tutorial will show you how to quickly and easily add grain to your own lenses. You can preview an effect using grain by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=9bbc641deec14df1a21c9f170b11ce04&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for example lens with grain](../../snapchat-beginner/grain/snapcode.png)
+![Snapcode for example lens with grain](/images/tutorials/snapchat-beginner/grain/snapcode.png)
 
 ## Getting grain images
 

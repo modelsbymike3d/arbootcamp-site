@@ -3,6 +3,7 @@ title: "Change the opacity of an image, color correction, or material with a sli
 metaTitle: "Change the opacity of an image, color correction, or material with a slider in Lens Studio"
 description: "Learn how to change the opacity of any image or color correction or material with a slider as we build a completely reusable script in Lens Studio!"
 image: /images/tutorials/snapchat-intermediate/opacity-slider/thumbnail.jpg
+path: snapchat-intermediate/opacity-slider
 software: "Lens Studio"
 software_version: "3.3.3"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 Letting the user change the opacity (or alpha) of an image is a pretty common question on the Lens Studio forums. Changing the opacity of an image itself isn't too tricky, but knowing how to do it with a slider so the user can control it is a bit trickier. In this tutorial we'll walk through the whole process and end up with a fully reusable script for future projects. You can see an example of this type of effect by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=5ea980b84abc43a3a6c1b36aa427e55a&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for lens with adjustable background blur](../../snapchat-intermediate/opacity-slider/snapcode.png)
+![Snapcode for lens with adjustable background blur](/images/tutorials/snapchat-intermediate/opacity-slider/snapcode.png)
 
 ## The user interface
 
@@ -34,11 +35,11 @@ Before we create our script, let's go ahead and get our slider created. We are g
 - Open up the UI widgets and delete everything except the "UI Color Picker"
 - Fully expand the UI Color Picker and put everything on the UI layer
 
-![Setting up the slider on a new layer/render target](../../snapchat-intermediate/opacity-slider/ui-setup.jpg)
+![Setting up the slider on a new layer/render target](/images/tutorials/snapchat-intermediate/opacity-slider/ui-setup.jpg)
 
 Now that we have our slider visible, it is time to tweak the appearance. We will be using the slider to control opacity, so we don't need the color bar or anything. Disable the UI Popup, Color Visual, and Palette. The cursor will disappear after you disable the Palette, so drag it out from under the Palette and parent it to the Background. You should now have the dark slider background with the cursor (the white circle) still present. You can also load in your own images for the cursor and slider background if you wish.
 
-![Modifying the color picker to be a plain slider](../../snapchat-intermediate/opacity-slider/slider-setup.jpg)
+![Modifying the color picker to be a plain slider](/images/tutorials/snapchat-intermediate/opacity-slider/slider-setup.jpg)
 
 ## The gameplan
 
@@ -99,7 +100,7 @@ script.colorPickerScript.api.setSliderValue(script.initialValue);
 
 Let's start with adjusting image opacity. Select the original camera in the scene and then add a Screen Image. This should create a new orthographic camera as well. If you don't see the screen image in the Preview Panel, don't worry, we'll take care of that. Go to the Scene Config and drag the Orthographic camera under the original camera. This will make sure the new orthographic camera is rendered before our UI cam is. Next, create a new Screen Image for the UI camera and drag it above the slider UI (also set it to the UI layer). For the image texture choose "Render Target." Basically what we are doing is making sure our lens is all rendered out to the Render Target (which is set for the Capture Target) but then so that we can also see it in our live target we are displaying the Render Target as a screen image on the UI camera.
 
-![Setting up render orders for our scene](../../snapchat-intermediate/opacity-slider/render-order-setup.jpg)
+![Setting up render orders for our scene](/images/tutorials/snapchat-intermediate/opacity-slider/render-order-setup.jpg)
 
 Now that we can see our screen image, let's control the opacity! Inside our `handleChange` function we are going to add a switch. Our new function should look like this:
 

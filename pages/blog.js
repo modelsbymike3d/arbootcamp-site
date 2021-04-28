@@ -7,6 +7,7 @@ import { getPages } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import H1 from "../components/h1";
+import Seo from "../components/seo";
 
 const Tile = (post, index) => {
   const description = post.description || post.excerpt;
@@ -26,9 +27,11 @@ export default function Blog({ allPosts }) {
   return (
     <>
       <Layout>
-        <Head>
-          <title>AR Bootcamp Blog</title>
-        </Head>
+        <Seo
+          title={"AR Bootcamp | Blog"}
+          description={`Just our blog with various AR related writings.`}
+          path={"blog"}
+        />
         <Container>
           <div className="text-black">
             <div className="flex flex-col  ">

@@ -38,6 +38,7 @@ export default function TutorialPost({ post, morePosts, preview }) {
                 date={post.date}
                 image={post.image}
                 imageAlt={post.title}
+                type={post.type}
               />
             </article>
           </>
@@ -48,8 +49,13 @@ export default function TutorialPost({ post, morePosts, preview }) {
 }
 
 export async function getStaticProps({ params }) {
-  const post = getFileByPath("_guides", params.slug);
+  const guide = getFileByPath("_guides", params.slug);
+  const tutorial = getFileByPath("_tutorials", params.slug);
+
+  const post = guide ? guide : tutorial;
   post.slug = params.slug;
+  post.type = guide ? "guide" : "tutorial";
+
   const content = await markdownToHtml(post.content || "");
 
   return {
@@ -64,9 +70,12 @@ export async function getStaticProps({ params }) {
 
 export async function getStaticPaths() {
   const posts = getPages("_guides");
+  const tutorials = getPages("_tutorials");
+
+  const all = [...posts, ...tutorials];
 
   return {
-    paths: posts.map((post) => {
+    paths: all.map((post) => {
       return {
         params: {
           slug: post.path.split("/"),

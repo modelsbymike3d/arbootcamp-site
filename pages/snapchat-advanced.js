@@ -53,33 +53,23 @@ const Tile = (post, index) => {
   );
 };
 
-const Section = (array, title) => {
-  if (array.length === 0) return null;
-  return (
-    <div>
-      <h2 className="mono font-bold text-4xl text-red-600 text-center mt-8">
-        {makeTitle(title)}
-      </h2>
-      <div>{array.map((post, i) => Tile(post, i))}</div>
-    </div>
-  );
-};
-
-export default function Tutorials({ tutorialObj }) {
+export default function SnapchatAdvanced({ posts }) {
   return (
     <>
       <Layout>
         <Seo
-          title={"AR Bootcamp | Tutorials"}
-          description={`The best place for Lens Studio and Spark AR tutorials. Are you ready to level up your augmented reality creations?`}
-          path={"tutorials"}
+          title={"AR Bootcamp | Advanced Lens Studio"}
+          description={`Now that you have a pretty solid foundation, let's move on to some more advanced lenses. Our advanced tutorials will help you become a master at Lens Studio.`}
+          path={"snapchat-advanced"}
         />
         <Container>
           <div className="text-black">
             <div className="flex flex-col  ">
-              <h1 className="mono text-6xl text-center">Tutorials</h1>
-              <p>{`If you want to learn how to create awesome augmented reality filters, you've come to the right place!`}</p>
-              <div>{sectionOrder.map((s) => Section(tutorialObj[s], s))}</div>
+              <h1 className="mono text-6xl text-center">
+                Advanced Lens Studio
+              </h1>
+              <p>{`Now that you have a pretty solid foundation, let's move on to some more advanced lenses. Our advanced tutorials will help you become a master at Lens Studio.`}</p>
+              <div>{posts.map((p, i) => Tile(p, i))}</div>
             </div>
           </div>
         </Container>
@@ -91,20 +81,15 @@ export default function Tutorials({ tutorialObj }) {
 export async function getStaticProps() {
   const allPosts = getPages("_tutorials");
 
-  const tutorialObj = {
-    "snapchat-beginner": [],
-    "snapchat-intermediate": [],
-    "snapchat-advanced": [],
-    "instagram-beginner": [],
-    "instagram-intermediate": [],
-    "instagram-advanced": [],
-  };
+  const posts = [];
 
   allPosts.forEach((p) => {
-    tutorialObj[p.section].push(p);
+    if (p.section.includes("snapchat-advanced")) {
+      posts.push(p);
+    }
   });
 
   return {
-    props: { tutorialObj },
+    props: { posts },
   };
 }

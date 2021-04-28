@@ -3,6 +3,7 @@ title: "Create the Time Warp effect in Lens Studio"
 metaTitle: "Create the Time Warp effect in Lens Studio"
 description: "If you have spent any time at all on Snapchat Spotlight, then you have seen the Screen Scanner Pro/Time Warp/Slit Scan lens in action. This seemingly advanced lens is actually super easy to make, you just need to make one small tweak."
 image: /images/tutorials/snapchat-intermediate/time-warp/thumbnail.jpg
+path: snapchat-intermediate/time-warp
 software: "Lens Studio"
 software_version: "3.4"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 If you have spent any time at all on Snapchat Spotlight, then you have seen the [Screen Scanner Pro](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=9254193def06435bb9731a174ead43ab&metadata=01)/Time Warp/Slit Scan lens in action. This seemingly advanced lens is actually super easy to make, you just need to make one small tweak. We'll go over everything you need to know in this Lens Studio tutorial. You can see an example of this by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=154cf2dfd5c4494ea5ae26fa30a835f7&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for lens with 3D text](../../snapchat-intermediate/time-warp/snapcode.png)
+![Snapcode for lens with 3D text](/images/tutorials/snapchat-intermediate/time-warp/snapcode.png)
 
 ## Introduction
 
@@ -42,11 +43,11 @@ Now that you have the camera, we need to create some sort of mask. We are going 
 
 You should see nothing in the preview panel because we are outputting all of this to a separate render target. If you want to see your mask, head to the Scene Config and change the Live Target to the Mask render target. While we're here, drag the Mask render target to be rendered first (before the default Render Target).
 
-![Setting up the mask camera](../../snapchat-intermediate/time-warp/mask-setup.jpg)
+![Setting up the mask camera](/images/tutorials/snapchat-intermediate/time-warp/mask-setup.jpg)
 
 So far this is pretty boring, so let's add some motion to our mask. In the Objects Panel, add a Tween Manager from the Helper Scripts menu. Delete everything that's nested under the Tween Manager and then move the Tween Manager itself to the top of the scene. Select the black screen image and add a script component. For the script, find and select the "TweenScreenTransform" and adjust the settings as desired. Here is how I setup mine.
 
-![Setting up the tween for the mask](../../snapchat-intermediate/time-warp/tween-settings.jpg)
+![Setting up the tween for the mask](/images/tutorials/snapchat-intermediate/time-warp/tween-settings.jpg)
 
 Now that we see our mask is doing something, return to the Scene Config and change the Live Target back to the default Render Target.
 

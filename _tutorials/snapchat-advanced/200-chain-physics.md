@@ -3,6 +3,7 @@ title: "Make things flop around with chain/swing physics in Lens Studio"
 metaTitle: "Make things flop around with chain/swing physics in Lens Studio"
 description: "Chain, or swing, physics can breathe a lot of life into your creations. With the proper setup, chain physics automatically adds swinging motion to elements of your lens. This can remove rigidity from objects in your scene and give everything a more organic feel."
 image: /images/tutorials/snapchat-advanced/chain-physics/thumbnail.jpg
+path: snapchat-advanced/chain-physics
 software: "Lens Studio"
 software_version: "3.4"
 author: "Michael Porter"
@@ -17,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 Chain, or swing, physics can breathe a lot of life into your creations. With the proper setup, chain physics automatically adds swinging motion to elements of your lens. This can remove rigidity from objects in your scene and give everything a more organic feel. In this Lens Studio tutorial we will go over everything you need to know to add chain physics to your own lenses. You can see an example of this by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=87fb00b83f5c4d85a691ee5a2bbe4e79&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for lens with 3D text](../../snapchat-advanced/chain-physics/snapcode.png)
+![Snapcode for lens with 3D text](/images/tutorials/snapchat-advanced/chain-physics/snapcode.png)
 
 ## What are chain physics?
 
@@ -35,7 +36,7 @@ The chain physics are controlled by three different scripts.
 - ChainController
 - PositionBasedDynamicsHelper
 
-![Script setup in the Lens Studio Chain Physics template](../../snapchat-advanced/chain-physics/template-scripts.jpg)
+![Script setup in the Lens Studio Chain Physics template](/images/tutorials/snapchat-advanced/chain-physics/template-scripts.jpg)
 
 You can find all three scripts in the "Scripts" folder in the Resources Panel. If we take a look at the Objects Panel, we'll see a "Helper Scripts" object that contains the JSMathLibrary and PositionBasedDynamicsHelper. We don't need to mess with those scripts at all, we just need to make sure they are present in our scene. If you select one of the groupings of objects (Leaf Earring Chain L, for example), you'll see in the Inspector Panel that this is where we place the ChainController script and configure the chain physics. Don't remove any of the joints, but feel free to play around with some of the other settings to see how things work. Once you are ready, right-click each script in the Resources Panel and choose the Export option. You can import these scripts into any project, so save them somewhere useful where you will remember where they are.
 
@@ -45,13 +46,13 @@ For the chain physics scripts to work, we need a rigged 3D model. Now this is a 
 
 The length of the chain (number of joints) can be as short or long as you wish. For this example I am going to be applying the chain physics to a simple worm model I made (marvel at my skill). For my particular model, I have four bones directed upwards and nine bones directed downwards. The bottom bones will be trailing below where I eventually put the user's face and the top bones will be controlling the motion above the face. When parenting my model to the rig I just used an automatic weight calculation (the weight is how much each portion of the model will be controlled by each bone). You don't need all the bones in your rig to be connected in a line. Each portion that you want to wiggle can have its own set of bones. For my worm model the top and bottom portions are going to be controlled separately, they just so happen to still be connected. Once your model is rigged and ready to go, export it and then import it into Lens Studio.
 
-![Rig and bone setup for chain physics inside of Blender](../../snapchat-advanced/chain-physics/bone-setup.jpg)
+![Rig and bone setup for chain physics inside of Blender](/images/tutorials/snapchat-advanced/chain-physics/bone-setup.jpg)
 
 ## Adding the scripts
 
 So I have my 3D model attached to a head binding, and now I want to add some motion. Make sure you've already imported the three chain physics scripts that you exported from the template, add a Scene Object in the Objects Panel, drag it to the top if the object hierarchy, and then add the JSMathLibrary and PositionBasedDynamicsHelper scripts to it. You can also rename it (this is the equivalent of the Helper Scripts object from the template). Now add the ChainController script to your scene. I placed mine on the worm model I imported. We are almost ready to add the joints, but if you look in the Logger you'll see there is an error. Go to the JSMathLibrary script component (what you added to the Objects Panel, not the actual script file in the Resources Panel), check the "Settings" box, and then select "vec3" and "quat." That should prevent the error from popping back up again.
 
-![Setting up the scripts for chain physics](../../snapchat-advanced/chain-physics/helper-script-setup.jpg)
+![Setting up the scripts for chain physics](/images/tutorials/snapchat-advanced/chain-physics/helper-script-setup.jpg)
 
 ## Add the physics
 
