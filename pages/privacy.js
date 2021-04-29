@@ -12,7 +12,7 @@ export default function Index() {
   return (
     <>
       <Layout>
-      <Seo
+        <Seo
           title={"AR Bootcamp | Privacy Policy"}
           description={`We don't really have a privacy policy because we don't track you all that much.`}
           path={"privacy"}
@@ -31,7 +31,17 @@ export default function Index() {
                 </a>
                 <span>{` for website analytics, but it is cookie-free and privacy focused so we only collect basic usage statistics.`}</span>
               </p>
-
+              <br />
+              <p>
+                <span>{`We recently added Cloudflare to the website and up until 10 May 2021 they place a cookie named __cfduid to help detect bots. It can in no way be used to identify you though, and soon won't be included on the site. You can `}</span>
+                <a
+                  href="https://blog.cloudflare.com/deprecating-cfduid-cookie/"
+                  className="underline"
+                >
+                  read more here.
+                </a>
+              </p>
+              <br />
               <p>{`If you sign up for the newsletter, we do not sell nor share your personal information (in this case, your email address). We use a double opt-in process and provide an unsubscribe link in every email so you can unsubscribe at any time.`}</p>
             </div>
           </div>
