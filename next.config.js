@@ -1,4 +1,4 @@
-const withTM = require('next-transpile-modules')(['unist-util-visit'])
+const withTM = require("next-transpile-modules")(["unist-util-visit"]);
 
 module.exports = withTM({
   webpack: (config, { isServer }) => {
@@ -6,6 +6,9 @@ module.exports = withTM({
     if (!isServer) {
       config.node = {
         fs: "empty",
+        net: "empty",
+        tls: "empty",
+        child_process: "empty",
       };
     }
 

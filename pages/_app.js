@@ -1,5 +1,4 @@
 import "../styles/index.css";
-import "../styles/prism.css";
 import "@fontsource/ubuntu-mono";
 import "@fontsource/lato";
 import PlausibleProvider from "next-plausible";

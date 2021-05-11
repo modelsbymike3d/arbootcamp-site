@@ -40,7 +40,10 @@ export default function Meta() {
         type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@algolia/algoliasearch-netlify-frontend@1/dist/algoliasearchNetlify.js"
       ></script>
-      
+      <link
+        rel="stylesheet"
+        href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/obsidian.min.css"
+      ></link>
     </Head>
   );
 }
