@@ -30,14 +30,14 @@ function makeTitle(s) {
 
 const Tile = (post, index) => {
   return (
-    <div key={index} className="text-black my-6">
-      <div className="flex flex-col sm:flex-row">
+    <div key={index} className="text-black my-6 mx-auto">
+      <div className="flex flex-col sm:flex-row mx-auto">
         <div>
           <LazyLoad height={216} offset={300}>
             <img
               src={post.image}
               alt={post.title}
-              className="max-w-md sm:w-96"
+              className="max-w-md w-full mx-auto sm:w-96"
             />
           </LazyLoad>
         </div>

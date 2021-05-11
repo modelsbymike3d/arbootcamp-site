@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import Search from "./search";
 
 const MenuEntry = (text, link, key) => {
   const router = useRouter();
@@ -78,6 +79,10 @@ export default function Navbar({ fixed }) {
             id="example-navbar-danger"
           >
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
+              <li>
+                {" "}
+                <Search />
+              </li>
               {navElements.map((elem, i) => MenuEntry(elem.text, elem.link, i))}
             </ul>
           </div>
