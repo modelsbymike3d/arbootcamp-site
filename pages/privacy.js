@@ -40,6 +40,7 @@ export default function Index() {
                 >
                   read more here.
                 </a>
+                {` If you do see any other cloudflare cookies, it's probably because you visited their website and picked some up there. AR Bootcamp itself won't be setting them.`}
               </p>
               <br />
               <p>{`If you sign up for the newsletter, we do not sell nor share your personal information (in this case, your email address). We use a double opt-in process and provide an unsubscribe link in every email so you can unsubscribe at any time.`}</p>
