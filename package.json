@@ -29,9 +29,11 @@
     "react-lazy-load": "^3.1.13",
     "react-lazyload": "^3.2.0",
     "remark": "13.0.0",
+    "remark-autolink-headings": "^6.0.1",
     "remark-gfm": "^1.0.0",
     "remark-highlight.js": "^6.0.0",
     "remark-html": "13.0.1",
+    "remark-slug": "^6.0.0",
     "remark-unwrap-images": "^2.0.0",
     "remove-markdown": "^0.3.0",
     "unist-util-visit": "^3.0.0"

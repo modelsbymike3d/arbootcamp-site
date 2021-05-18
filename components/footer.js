@@ -22,6 +22,9 @@ export default function Footer() {
                 </div>
             </div>
             <div className="text-center">
+              This site uses <a className="underline" href="https://fontawesome.com/license/free">Font Awesome</a> for icons.
+            </div>
+            <div className="text-center">
                 Copyright {new Date().getFullYear()}
             </div>
         </footer>
