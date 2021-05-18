@@ -28,7 +28,7 @@ This may be one of the most common questions I hear when it comes to becoming a 
 
 I do not work for Snapchat so I definitely do not have the ability to verify you no matter how much money you may offer. Furthermore, [Snap themselves](https://support.snapchat.com/en-US/article/about-creator-accounts) state they verification has no cost, and anyone claiming to be able to sell you verification is not legitimate. If you were able to buy verification, I have a feeling it would not last very long and you would probably be at risk of having your account banned. So under no circumstances should you be trying to pay someone to get your account verified.
 
-### Can you put in contact with the right person at Snapchat to get my account verified?
+### Can you put me in contact with the right person at Snapchat to get my account verified?
 
 I am also unable to put you in contact with someone at Snapchat for verification. As an OLC, I do have contact with some Snapchat employees, but the last thing I am going to do is start handing out their contact information. If that were the proper route to verification, they would have made their contact information public.
 
