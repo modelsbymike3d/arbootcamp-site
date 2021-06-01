@@ -16,7 +16,7 @@ const Tile = (post, index) => {
       <img
         src={post.image}
         alt={post.title}
-        height="200px"
+        height="200"
         className="w-full max-w-md"
       />
       <h2 className="mono text-2xl underline">

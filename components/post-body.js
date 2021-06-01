@@ -7,7 +7,7 @@ export default function PostBody({ content, date, image, imageAlt, type }) {
         <div className="text-black italic text-sm">Published {date}</div>
       )}
       {image && !(type && type === "tutorial") && (
-        <img src={image} alt={imageAlt} height="200px" className="w-auto" />
+        <img src={image} alt={imageAlt} height="200" className="w-auto" />
       )}
       <div
         className={markdownStyles["markdown"]}

@@ -31,14 +31,14 @@ const Filter = ({
       <img
         src={preview}
         alt={name}
-        height="200px"
+        height="200"
         className="h-96 mx-auto my-3"
       />
       <p>{description}</p>
       <img
         src={code_image}
         alt={`Scannable code to try the ${name} filter`}
-        height="200px"
+        height="200"
         className="mx-auto w-48 my-4"
       />
       <p className="text-center my-2">
