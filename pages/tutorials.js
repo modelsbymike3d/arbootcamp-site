@@ -38,6 +38,7 @@ const Tile = (post, index) => {
               src={post.image}
               alt={post.title}
               height="200"
+              width="350"
               className="max-w-md w-full mx-auto sm:w-96"
             />
           </LazyLoad>

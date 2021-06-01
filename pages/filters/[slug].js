@@ -32,6 +32,7 @@ const Filter = ({
         src={preview}
         alt={name}
         height="200"
+        width="350"
         className="h-96 mx-auto my-3"
       />
       <p>{description}</p>
@@ -39,6 +40,7 @@ const Filter = ({
         src={code_image}
         alt={`Scannable code to try the ${name} filter`}
         height="200"
+        width="350"
         className="mx-auto w-48 my-4"
       />
       <p className="text-center my-2">
