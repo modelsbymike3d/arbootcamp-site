@@ -37,6 +37,7 @@ const Tile = (post, index) => {
             <img
               src={post.image}
               alt={post.title}
+              height="200px"
               className="max-w-md sm:w-96"
             />
           </LazyLoad>
@@ -57,7 +58,7 @@ export default function SnapchatIntermediate({ posts }) {
   return (
     <>
       <Layout>
-      <Seo
+        <Seo
           title={"AR Bootcamp | Intermediate Lens Studio"}
           description={`Have you mastered the basics? Itching to make something a little more advanced? You've come to the right place!`}
           path={"snapchat-intermediate"}

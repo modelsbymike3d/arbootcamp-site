@@ -28,11 +28,17 @@ const Filter = ({
   return (
     <div key={index} className="text-black mt-12 w-4/5 sm:w-2/3 mx-auto">
       <h2 className="mono text-3xl text-center text-red-600">{name}</h2>
-      <img src={preview} alt={name} className="h-96 mx-auto my-3" />
+      <img
+        src={preview}
+        alt={name}
+        height="200px"
+        className="h-96 mx-auto my-3"
+      />
       <p>{description}</p>
       <img
         src={code_image}
         alt={`Scannable code to try the ${name} filter`}
+        height="200px"
         className="mx-auto w-48 my-4"
       />
       <p className="text-center my-2">

@@ -37,6 +37,7 @@ const Tile = (post, index) => {
             <img
               src={post.image}
               alt={post.title}
+              height="200px"
               className="max-w-md sm:w-96"
             />
           </LazyLoad>
@@ -57,7 +58,7 @@ export default function SnapchatBeginner({ posts }) {
   return (
     <>
       <Layout>
-      <Seo
+        <Seo
           title={"AR Bootcamp | Beginner Lens Studio"}
           description={`Getting started with Snapchat lenses and Lens studio? You've come to the right place! Here you can find a list of beginner level Lens Studio tutorials.`}
           path={"snapchat-beginner"}

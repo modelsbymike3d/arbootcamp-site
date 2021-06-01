@@ -14,7 +14,12 @@ const Tile = (post, index) => {
   return (
     <div key={index} className="text-black my-12">
       <div className="flex flex-col sm:flex-row">
-        <img src={post.image} alt={post.title} className="max-w-md sm:w-96" />
+        <img
+          src={post.image}
+          alt={post.title}
+          height="200px"
+          className="max-w-md sm:w-96"
+        />
 
         <div className="sm:ml-4">
           <h2 className="mono text-2xl underline">

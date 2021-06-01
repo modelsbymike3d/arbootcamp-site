@@ -57,6 +57,7 @@ export default function Navbar({ fixed }) {
                 <img
                   src="/images/logo_dark.png"
                   alt="AR Bootcamp logo"
+                  width="256px"
                   className="w-64"
                 />
               </a>

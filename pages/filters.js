@@ -13,7 +13,12 @@ const Tile = (post, index) => {
   const description = post.description || post.excerpt;
   return (
     <div key={index} className="text-black my-6">
-      <img src={post.image} alt={post.title} className="max-w-md w-full" />
+      <img
+        src={post.image}
+        alt={post.title}
+        height="200px"
+        className="max-w-md w-full"
+      />
       <h2 className="mono text-2xl underline">
         <a href={`/filters/${post.path}`}>{post.title}</a>
       </h2>
