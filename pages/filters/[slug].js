@@ -33,7 +33,7 @@ const Filter = ({
         alt={name}
         height="200"
         width="350"
-        className="h-96 mx-auto my-3"
+        className="h-96 mx-auto w-auto my-3"
       />
       <p>{description}</p>
       <img

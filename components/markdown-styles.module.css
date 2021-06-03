@@ -3,7 +3,7 @@
 }
 
 .markdown img {
-  @apply mx-auto;
+  @apply mx-auto w-full max-w-max;
 }
 
 .markdown p,
@@ -13,7 +13,7 @@
 }
 
 .markdown blockquote {
-  @apply px-4 py-1 bg-gray-200 italic;
+  @apply my-2 px-4 py-1 bg-gray-200 italic;
 }
 
 .markdown ul {
