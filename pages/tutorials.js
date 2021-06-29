@@ -59,7 +59,10 @@ const Section = (array, title) => {
   if (array.length === 0) return null;
   return (
     <div>
-      <h2 className="mono font-bold text-4xl text-red-600 text-center mt-8">
+      <h2
+        id={title}
+        className="mono font-bold text-4xl text-red-600 text-center mt-8"
+      >
         {makeTitle(title)}
       </h2>
       <div>{array.map((post, i) => Tile(post, i))}</div>
@@ -67,7 +70,39 @@ const Section = (array, title) => {
   );
 };
 
+const PageLink = ({ title, link }) => {
+  return (
+    <div className="my-4 text-center">
+      <a className="mono text-2xl underline" href={link}>
+        {title}
+      </a>
+    </div>
+  );
+};
+
 export default function Tutorials({ tutorialObj }) {
+  const data = [
+    {
+      title: "Snapchat Beginner",
+      link: "snapchat-beginner",
+    },
+    {
+      title: "Snapchat Intermediate",
+      link: "snapchat-intermediate",
+    },
+    {
+      title: "Snapchat Advanced",
+      link: "snapchat-advanced",
+    },
+    {
+      title: "Instagram Beginner",
+      link: "instagram-beginner",
+    },
+    {
+      title: "Instagram Intermediate",
+      link: "instagram-intermediate",
+    },
+  ];
   return (
     <>
       <Layout>
@@ -80,8 +115,18 @@ export default function Tutorials({ tutorialObj }) {
           <div className="text-black">
             <div className="flex flex-col  ">
               <h1 className="mono text-6xl text-center">Tutorials</h1>
-              <p>{`If you want to learn how to create awesome augmented reality filters, you've come to the right place!`}</p>
-              <div>{sectionOrder.map((s) => Section(tutorialObj[s], s))}</div>
+              <p>{`If you want to learn how to create awesome augmented reality filters, you've come to the right place! Browse by difficulty level, or use the search bar at the top if you're looking for something specific.`}</p>
+              <div>
+                {data.map((d, i) => (
+                  <div key={i}>{PageLink(d)}</div>
+                ))}
+              </div>
+              <div>
+                <h2 className="mono font-bold text-5xl text-red-600 text-center mt-8">
+                  All Tutorials
+                </h2>
+                <div>{sectionOrder.map((s) => Section(tutorialObj[s], s))}</div>
+              </div>
             </div>
           </div>
         </Container>
