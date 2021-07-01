@@ -16,6 +16,8 @@ homepage: "https://modelsbymike3d.com"
 
 `youtube:RWevNaCJ1jM`
 
+> You can buy the finished post effect [here](https://gum.co/vyHOg)
+
 In this tutorial we'll go over how to create a sharpening effect in Lens Studio (sometimes called "alt" by the cool kids). When used subtly it sharpens the image, and when used prominently you achieve a more HDR look to your lens. You can preview this effect by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=665301c383954af8a813de5025351bf1&metadata=01) or by scanning the snapcode below.
 
 ![Snapcode for example lens with a sharpening effect](/images/tutorials/snapchat-beginner/sharpen/snapcode.svg)
@@ -48,5 +50,5 @@ This sharpen effect is fairly simple to create and add to your lens. Because we 
 
 ## Further reading
 
-- [Material Editor](https://lensstudio.snapchat.com/guides/material-editor/introduction-and-concepts/)
-- [Post Effects](https://lensstudio.snapchat.com/guides/2d/post-effect/)
+-   [Material Editor](https://lensstudio.snapchat.com/guides/material-editor/introduction-and-concepts/)
+-   [Post Effects](https://lensstudio.snapchat.com/guides/2d/post-effect/)
