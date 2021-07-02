@@ -11,6 +11,10 @@ If you've ever used Instagram, I'm sure you're familiar with filters. Filters ar
 
 > Be sure to test your color effect on people with varying skin tones. Some LUTs that look good on people with lighter skin will sometimes make darker skin turn very orange. Spark AR has done a good job of including both male and female individuals of various ethnicities in the [video selector in the toolbar](https://sparkar.facebook.com/ar-studio/learn/articles/fundamentals/navigating-the-interface#the-toolbar-and-menu-bar). Use this to make sure your effect looks good on everyone.
 
+## Free LUTs
+
+Want to save some time and are looking for free LUTs for Spark AR? I've converted all 38 of Lens Studio's built-in LUTs for use in Spark AR! They are [free to download on Gumroad](https://gum.co/SparkAR-LUTs) and are compatible with [Josh Beckwith's FastColorLUT patch](https://github.com/positlabs/spark-lut-patch). If you are looking for a little more control over your LUTs, I've modified the FastColorLUT patch to let you control the strength of the LUT; [it is also free on Gumroad](https://gum.co/FastColorLUT-Plus).
+
 ## Using LUTs
 
 If you are a photographer, you probably have at least a few Lightroom presets. It is pretty easy to take your presets, turn them into LUTs, and then use those LUTs within Spark AR. This tutorial by Till walks you through the whole process, from exporting the LUT to importing into Spark AR and finally submitting your finished effect.
