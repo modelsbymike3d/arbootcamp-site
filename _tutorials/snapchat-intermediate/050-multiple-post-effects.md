@@ -18,7 +18,7 @@ homepage: "https://modelsbymike3d.com"
 
 Lens Studio does a really good job of setting things up behind the scenes so that you can focus on your lens. However, some effects will require you to manually create and adjust cameras, layers, and render targets. You can see an example lens using multiple, distinct post effects by [clicking here](https://www.snapchat.com/unlock/?type=SNAPCODE&uuid=7680a48d4b1745a8b4f5b1b80bb7ce3c&metadata=01) or by scanning the snapcode below.
 
-![Snapcode for lens multiple post effects](/images/tutorials/snapchat-intermediate/multiple-post-effects/snapcode.png)
+![Snapcode for lens with multiple post effects](/images/tutorials/snapchat-intermediate/multiple-post-effects/snapcode.png)
 
 ## Introduction
 
