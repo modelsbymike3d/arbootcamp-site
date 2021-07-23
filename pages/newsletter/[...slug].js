@@ -13,6 +13,7 @@ import { CMS_NAME } from "../../lib/constants";
 import markdownToHtml from "../../lib/markdownToHtml";
 
 export default function NewsletterPost({ post, morePosts, preview }) {
+  post.extraPath = "newsletter";
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;

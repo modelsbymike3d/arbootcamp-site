@@ -59,6 +59,7 @@ const Filter = ({
 };
 
 export default function FiltersPost({ post, morePosts, preview }) {
+  post.extraPath = "filters";
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
