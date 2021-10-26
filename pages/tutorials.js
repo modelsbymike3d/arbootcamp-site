@@ -10,6 +10,7 @@ import LazyLoad from "react-lazyload";
 import Seo from "../components/seo";
 
 const sectionOrder = [
+  "lens-studio-beginner-beauty",
   "snapchat-beginner",
   "snapchat-intermediate",
   "snapchat-advanced",
@@ -83,23 +84,27 @@ const PageLink = ({ title, link }) => {
 export default function Tutorials({ tutorialObj }) {
   const data = [
     {
-      title: "Snapchat Beginner",
+      title: "Lens Studio Beginner Beauty",
+      link: "tracks/lens-studio-beginner-beauty",
+    },
+    {
+      title: "Lens Studio Beginner",
       link: "snapchat-beginner",
     },
     {
-      title: "Snapchat Intermediate",
+      title: "Lens Studio Intermediate",
       link: "snapchat-intermediate",
     },
     {
-      title: "Snapchat Advanced",
+      title: "Lens Studio Advanced",
       link: "snapchat-advanced",
     },
     {
-      title: "Instagram Beginner",
+      title: "Spark AR Beginner",
       link: "instagram-beginner",
     },
     {
-      title: "Instagram Intermediate",
+      title: "Spark AR Intermediate",
       link: "instagram-intermediate",
     },
   ];
@@ -139,6 +144,7 @@ export async function getStaticProps() {
   const allPosts = getPages("_tutorials");
 
   const tutorialObj = {
+    "lens-studio-beginner-beauty": [],
     "snapchat-beginner": [],
     "snapchat-intermediate": [],
     "snapchat-advanced": [],
