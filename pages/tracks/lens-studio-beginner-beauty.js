@@ -32,7 +32,7 @@ const Tile = (post, index) => {
 
         <div className="sm:ml-4">
           <h3 className="mono text-2xl underline">
-            <a href={`${post.path}`}>{post.title}</a>
+            <a href={`../${post.path}`}>{post.title}</a>
           </h3>
           <p>{post.description}</p>
         </div>
@@ -47,7 +47,7 @@ export default function Track({ posts }) {
       <Layout>
         <Seo
           title={"AR Bootcamp | Beginner Beauty Lens Studio"}
-          description={`Getting started with Instagram or Facebook filters and Spark AR? You've come to the right place! Our beginner level Spark AR tutorials are geared towards getting you started with the software. You can follow them in sequence or pick and choose what interests you the most.`}
+          description={`Learn how to make your very first Snapchat filter with Lens Studio! Beauty and aesthetic filters are a great way to get started. They are easy to make and will help you get started on your lens creating journey!`}
           path={"lens-studio-beginner-beauty"}
         />
         <Container>
@@ -56,7 +56,7 @@ export default function Track({ posts }) {
               <h1 className="mono text-6xl text-center">
                 Beginner Beauty Lens Studio
               </h1>
-              <p>{`Getting started with Instagram or Facebook filters and Spark AR? You've come to the right place! Our beginner level Spark AR tutorials are geared towards getting you started with the software. You can follow them in sequence or pick and choose what interests you the most.`}</p>
+              <p>{`Learn how to make your very first Snapchat filter with Lens Studio! Beauty and aesthetic filters are a great way to get started. They are easy to make and will help you get started on your lens creating journey!`}</p>
               <div>{posts.map((p, i) => Tile(p, i))}</div>
             </div>
           </div>

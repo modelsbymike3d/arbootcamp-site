@@ -1,8 +1,8 @@
 ---
-title: "Download and install Lens Studio"
-description: "Lens Studio is Snapchat's tool for creating lenses. It is a super approachable, yet powerful piece of software."
-image: /images/tutorials/lens-studio-beginner-beauty/download-lens-studio/thumbnail.jpg
-path: lens-studio-beginner-beauty/download-lens-studio
+title: "Introduction"
+description: "Let's get started with Lens Studio! Lens Studio is Snapchat's tool for creating lenses. It is a super approachable, yet powerful piece of software. The first thing we need to do is install it."
+image: /images/tutorials/lens-studio-beginner-beauty/introduction/thumbnail.jpg
+path: lens-studio-beginner-beauty/introduction
 software: "Lens Studio"
 software_version: "4.1.1"
 author: "Michael Porter"
@@ -12,6 +12,12 @@ twitter: "modelsbymike3d"
 youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
 homepage: "https://modelsbymike3d.com"
 ---
+
+`youtube:AWhSDzm1Mo8`
+
+## What we're making
+
+In this tutorial series we'll be going over how to create a beauty/aesthetic filter for Snapchat from start to finish. If you've never created a Snapchat filter before, we'll be helping you every step of the way and have you creating your own lenses in no time!
 
 ## Your computer
 

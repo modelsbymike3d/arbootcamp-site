@@ -1,6 +1,6 @@
 ---
 title: "Getting help with Lens Studio"
-description: "Lens Studio is Snapchat's tool for creating lenses. It's super powerful and super flexible. While it's been designed to be easy to use, here's a quick overview of how the software is layed out."
+description: "Are you stuck? Whether you are creating your first filter or your thousandth filter, at some point you are going to get stuck. Fortunately there are lots of places you can turn for help."
 image: /images/tutorials/lens-studio-beginner-beauty/getting-help/thumbnail.jpg
 path: lens-studio-beginner-beauty/getting-help
 software: "Lens Studio"
@@ -12,6 +12,8 @@ twitter: "modelsbymike3d"
 youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
 homepage: "https://modelsbymike3d.com"
 ---
+
+`youtube:WoqDKi8BVSg`
 
 ## Don't skip me!
 
@@ -29,6 +31,15 @@ Each of my tutorials has an accompanying video version. If you run into any issu
 
 Lens Studio has an [official forum](https://support.lensstudio.snapchat.com/hc/en-us/community/topics). It's not the most active forum on the planet, but if you have a more complicated issue and need to share screenshots of what is going on, this is the place to ask. Members of the Lens Studio team will occasionally chime in, but also members of the community are able to offer help. If rewatching the tutorial doesn't help and it's not a quick question you can ask in a YouTube comment, this is the place to ask. As a bonus, if your question relates to one of my tutorials you can tag me, modelsbymike3d, in your question to make sure I see it.
 
+## LAB
+
+Generally I recommend you first ask your question on the official Lens Studio forum. But, if you have a more technical question then you might have better luck asking on [LAB](https://lab.popul-ar.com/) by Popul-AR. This is an unofficial forum and does not have a ton of Lens Studio users, but if you have a scripting related question this is a good place to ask.
+
 ## How to ask for help
 
 This might be the most important tip for getting help. Ask clear questions. I often see people post things like, "It doesn't look right please help!" The problem with that is that someone now needs to ask a follow up - the original question does not contain any information that will help solve the problem. A better question would be, "I added a color correction post effect but the preview doesn't match what I was seeing in Photoshop. The colors seem too saturated." This question, along with screenshots of the lens setup, will probably get a quick answer that solves the issue. Try to make it as easy as possible for someone to answer your question.
+
+## Helpful links
+
+- [Lens Studio forum](https://support.lensstudio.snapchat.com/hc/en-us/community/topics)
+- [LAB](https://lab.popul-ar.com/)

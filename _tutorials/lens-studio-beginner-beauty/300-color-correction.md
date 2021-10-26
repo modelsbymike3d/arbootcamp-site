@@ -1,8 +1,8 @@
 ---
 title: "Color Corrections"
-description: "A color correction is a nice way to enhance the look and feel of your lens. Color corrections are controlled by lookup tables, or LUTs for short."
-image: /images/tutorials/lens-studio-beginner-beauty/color-correction/thumbnail.jpg
-path: lens-studio-beginner-beauty/color-correction
+description: "Add a color correction or LUT to enhance the feel of your lens! A color correction is a nice way to enhance the look and feel of your lens. Color corrections are controlled by lookup tables, or LUTs for short."
+image: /images/tutorials/lens-studio-beginner-beauty/color-corrections/thumbnail.jpg
+path: lens-studio-beginner-beauty/color-corrections
 software: "Lens Studio"
 software_version: "4.1.1"
 author: "Michael Porter"
@@ -12,6 +12,8 @@ twitter: "modelsbymike3d"
 youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
 homepage: "https://modelsbymike3d.com"
 ---
+
+`youtube:GOnLKqTjPT8`
 
 ## Why add a color correction?
 

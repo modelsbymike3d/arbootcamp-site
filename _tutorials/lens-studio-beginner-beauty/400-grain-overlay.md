@@ -1,6 +1,6 @@
 ---
 title: "Grain Overlays"
-description: "Lots of people like the look of film grain on their lenses. "
+description: "Want to add some grain to your lens? Grain is a popular choice for lenses. It adds a more authentic or vintage feel and is super easy to add."
 image: /images/tutorials/lens-studio-beginner-beauty/grain-overlay/thumbnail.jpg
 path: lens-studio-beginner-beauty/grain-overlay
 software: "Lens Studio"
@@ -12,6 +12,8 @@ twitter: "modelsbymike3d"
 youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
 homepage: "https://modelsbymike3d.com"
 ---
+
+`youtube:gz-NHNnusT8`
 
 ## Why add grain?
 
@@ -36,3 +38,19 @@ A static grain overlay is super simple to import. All you need to do is click th
 For an animated grain overlay, we are going to import our images as a [2D animation](https://lensstudio.snapchat.com/guides/2d/2d-animation/). This does not work with video, only image sequences. Inside Lens Studio, click the "+" button in the Resources Panel, find "2D Animation From Files," and then select all your frames. This will open a new window with some different settings. You don't really need to change anything here for a grain overlay, so you can just click the "OK" button. The main option you ever would need to change here is the image format (either jpg or png) depending on if your animation frames contain transparency.
 
 ![Importing a 2D animation sequence in Lens Studio](/images/tutorials/lens-studio-beginner-beauty/grain-overlay/frame-import.jpg)
+
+## Adding the grain as an overlay
+
+Now that we've imported our grain, we need to add it to the scene. Start off by adding a "Screen Image" in the Objects Panel. If you don't already have an orthographic camera in the scene this will create one, otherwise it should add the screen image to an existing orthographic camera.
+
+With the screen image selected, change the texture to either the static grain image or the 2D animation that you imported. Then change the "Stretch Mode" to either "Fill" or "Stretch." This will ensure your overlay covers the entire screen and does not leave any gaps.
+
+At this point your grain should be filling the preview, but you won't be able to see the rest of your lens. The last step will be to change the blend mode of the overlay. If you downloaded your grain from Film Composite, they will include the appropriate blend mode in the description of the grain (e.g. Hard Light, Overlay, etc). If you got your grain from somewhere else, check to see what they recommend or start out with overlay. If the grain is too strong, you can adjust the alpha of the image to add some transparency and reduce the strength of the grain.
+
+![Configuring the grain overlay in Lens Studio](/images/tutorials/lens-studio-beginner-beauty/grain-overlay/overlay-settings.jpg)
+
+## Helpful links
+
+- [Free grain from Film Composite](https://www.filmcomposite.com/free-film-assets)
+- [2D animation import](https://lensstudio.snapchat.com/guides/2d/2d-animation/)
+- [Grain tutorials](https://arbootcamp.com/lens-studio/grain)

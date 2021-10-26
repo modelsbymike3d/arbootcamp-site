@@ -1,6 +1,6 @@
 ---
 title: "Face retouching in Lens Studio"
-description: "Lens Studio has some great, automatic face retouching capabilities. All you need to do is add the retouching, adjust a few sliders, and you are good to go!"
+description: "Learn how to add skin smoothing to your filter! Lens Studio has some great, automatic face retouching capabilities. All you need to do is add the retouching, adjust a few sliders, and you are good to go!"
 image: /images/tutorials/lens-studio-beginner-beauty/face-retouch/thumbnail.jpg
 path: lens-studio-beginner-beauty/face-retouch
 software: "Lens Studio"
@@ -12,6 +12,8 @@ twitter: "modelsbymike3d"
 youtube: "https://www.youtube.com/channel/UCpLVNOoqAc3cnd_QgSxoAvg"
 homepage: "https://modelsbymike3d.com"
 ---
+
+`youtube:y5Pc9vA_rts`
 
 ## To retouch, or not to retouch?
 
