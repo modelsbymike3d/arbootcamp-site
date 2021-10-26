@@ -1,12 +1,12 @@
-const axios = require('axios').default;
+const axios = require("axios").default;
 
-exports.handler = async function(event, context) {
+exports.handler = async function (event, context) {
   const { email, honey } = JSON.parse(event.body);
 
-  if (honey !== '') {
+  if (honey !== "") {
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'Bot submission', type: 'BOT' }),
+      body: JSON.stringify({ message: "Bot submission", type: "BOT" }),
     };
   }
 
@@ -24,12 +24,12 @@ exports.handler = async function(event, context) {
     console.log(resp.data);
     return {
       statusCode: 200,
-      body: JSON.stringify({ message: 'Success' }),
+      body: JSON.stringify({ message: "Success" }),
     };
   } catch (err) {
     return {
       statusCode: 400,
-      body: JSON.stringify({ message: 'failed', err }),
+      body: JSON.stringify({ message: "failed", err }),
     };
   }
 };

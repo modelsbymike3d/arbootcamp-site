@@ -76,7 +76,6 @@ export async function getStaticPaths() {
 
   return {
     paths: all.map((post) => {
-      console.log(post);
       return {
         params: {
           slug: post.path.split("/"),

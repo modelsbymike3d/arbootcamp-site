@@ -21,7 +21,7 @@
     "glob": "^7.1.6",
     "globby": "^11.0.3",
     "gray-matter": "4.0.2",
-    "next": "latest",
+    "next": "^10",
     "next-plausible": "^1.6.1",
     "next-transpile-modules": "^6.4.0",
     "react": "^17.0.1",

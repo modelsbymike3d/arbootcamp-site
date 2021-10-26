@@ -71,8 +71,6 @@ export async function getStaticProps() {
 
   const posts = [];
 
-  console.log(allPosts);
-
   allPosts.forEach((p) => {
     if (p.section.includes("lens-studio-beginner-beauty")) {
       posts.push(p);
