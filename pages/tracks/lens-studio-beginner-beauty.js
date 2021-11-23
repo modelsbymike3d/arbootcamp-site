@@ -48,7 +48,7 @@ export default function Track({ posts }) {
         <Seo
           title={"AR Bootcamp | Beginner Beauty Lens Studio"}
           description={`Learn how to make your very first Snapchat filter with Lens Studio! Beauty and aesthetic filters are a great way to get started. They are easy to make and will help you get started on your lens creating journey!`}
-          path={"lens-studio-beginner-beauty"}
+          path={"tracks/lens-studio-beginner-beauty"}
         />
         <Container>
           <div className="text-black">
