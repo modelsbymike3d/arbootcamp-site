@@ -107,6 +107,10 @@ export default function Tutorials({ tutorialObj }) {
       title: "Spark AR Intermediate",
       link: "instagram-intermediate",
     },
+    {
+      title: "Spark AR Advanced",
+      link: "instagram-advanced",
+    },
   ];
   return (
     <>
