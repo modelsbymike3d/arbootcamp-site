@@ -17,7 +17,7 @@ homepage: "https://modelsbymike3d.com"
 
 SparkSL is a super powerful feature of Spark AR - with it you can create your own shaders with code. However, there are some key differences between SparkSL and GLSL which can make converting existing shaders tricky. This tutorial will go over the process of converting a shader from Shadertoy to Spark's own SparkSL. You can view an example of this type of filter [by clicking here](https://www.instagram.com/ar/873168960041924/) or by scanning the code below.
 
-![QR code leading to an example stencil effect filter for Instagram](/images/tutorials/instagram-advanced/shadertoy/qr-code.png)
+![QR code leading to a crosshatch effect built using SparkSL](/images/tutorials/instagram-advanced/shadertoy/qr-code.png)
 
 ## SparkSL
 
