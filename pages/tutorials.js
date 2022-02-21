@@ -59,7 +59,7 @@ const Tile = (post, index) => {
 const Section = (array, title) => {
   if (array.length === 0) return null;
   return (
-    <div>
+    <div key={title}>
       <h2
         id={title}
         className="mono font-bold text-4xl text-red-600 text-center mt-8"

@@ -5,6 +5,7 @@ import PostBody from "../components/post-body";
 import Header from "../components/header";
 import PostHeader from "../components/post-header";
 import Layout from "../components/layout";
+import AuthorSection from "../components/author-section";
 import { getPages, getFileByPath } from "../lib/api";
 import PostTitle from "../components/post-title";
 import Seo from "../components/seo";
@@ -12,11 +13,20 @@ import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import markdownToHtml from "../lib/markdownToHtml";
 
+const Version = ({ software, software_version }) => {
+  return (
+    <div className="max-w-2xl mx-auto text-gray-600 flex sm:flex-row flex-col mb-4 italic">
+      Tutorial created using {software} {software_version}
+    </div>
+  );
+};
+
 export default function TutorialPost({ post, morePosts, preview }) {
   const router = useRouter();
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+  console.log(post);
   return (
     <Layout preview={preview}>
       <Container>
@@ -33,6 +43,10 @@ export default function TutorialPost({ post, morePosts, preview }) {
                 author={post.author}
               /> */}
               <PostTitle>{post.title}</PostTitle>
+              {post.type === "tutorial" ? <AuthorSection {...post} /> : null}
+              {post.software && post.software_version ? (
+                <Version {...post} />
+              ) : null}
               <PostBody
                 content={post.content}
                 date={post.date}
@@ -55,6 +69,14 @@ export async function getStaticProps({ params }) {
   const post = guide ? guide : tutorial;
   post.slug = params.slug;
   post.type = guide ? "guide" : "tutorial";
+  post.contributor = post.author || "";
+  post.contributor_site = post.homepage || "";
+  post.contributor_snapchat = post.snapchat || "";
+  post.contributor_instagram = post.instagram || "";
+  post.contributor_twitter = post.twitter || "";
+  post.contributor_youtube = post.youtube || "";
+  post.contributor_facebook = post.facebook || "";
+  post.contributor_linkedin = post.linkedin || "";
 
   const content = await markdownToHtml(post.content || "");
 
@@ -71,8 +93,11 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   const posts = getPages("_guides");
   const tutorials = getPages("_tutorials");
+  const labeledTutorials = tutorials.map((t) => {
+    return { ...t, type: "tutorial" };
+  });
 
-  const all = [...posts, ...tutorials];
+  const all = [...posts, ...labeledTutorials];
 
   return {
     paths: all.map((post) => {
