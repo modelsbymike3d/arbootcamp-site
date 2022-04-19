@@ -26,7 +26,6 @@ export default function TutorialPost({ post, morePosts, preview }) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
-  console.log(post);
   return (
     <Layout preview={preview}>
       <Container>
