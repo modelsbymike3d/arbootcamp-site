@@ -3,7 +3,7 @@
 }
 
 .markdown img {
-  @apply mx-auto w-full max-w-max;
+  @apply mx-auto w-full max-w-max p-2;
 }
 
 .markdown p,
