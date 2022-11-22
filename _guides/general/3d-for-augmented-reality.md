@@ -25,7 +25,7 @@ Let's start with the mesh. Maybe you are going to model or sculpt it yourself, o
 
 ### Triangle Count
 
-A 3D mesh consists of various polygons connected together. Usually these are quads or triangles. Each platform lists their limits in triangle count, so that is the value we are going to use here. Lens Studio has a soft limit of 100k triangles, but they recommend no more than 60k if the object is animated (and only 3k for cloth simulation). Meta Spark recommends 50k per object with 150k total per effect, and Effect House is the lowest at 20k triangles per model and 60k total per effect. That's all a bunch of very dry information, but essentially you want to keep things as low-poly as reasonably possible.
+A 3D mesh consists of various polygons connected together - each point of the polygon is a vertex. Usually these are quads or triangles. Each platform lists their limits in triangle count, so that is the value we are going to use here. Lens Studio has a soft limit of 100k triangles, but they recommend no more than 60k if the object is animated (and only 3k for cloth simulation). Meta Spark recommends 50k per object with 150k total per effect, and Effect House is the lowest at 20k triangles per model and 60k total per effect. That's all a bunch of very dry information, but essentially you want to keep things as low-poly as reasonably possible.
 
 If you sculpted some awesome 3D character in Zbrush, you are going to have to do some retopologizing to get that poly count low enough. If you are downloading a character from TurboSquid, take a look at the poly count; if it is too high you'll have to do some tweaking to make it all fit. Creating assets for AR is much more similar to creating game-ready assets than it is to creating assets for film or TV.
 
@@ -39,4 +39,27 @@ If you stick with obj, fbx, and gltf you will be good to go. If your object has 
 
 This tip may be Blender specific, but the lesson holds for users of any 3D software. One technique for creating face filters is to add blendshapes/shapekeys/morphkeys to a mesh. So what you do is you take your base mesh and create a shapekey (called Basis in Blender). Then you can create a new shapekey, give it a name, then adjust individual vertices. The main use case is to allow the user to animate a 3D face; I might have shapekeys for an open mouth, raised eyebrows, etc. So why is this under the modifiers section? In Blender we have the subdivision surface modifier. This smooths the geometry by adding subdivisions and is fairly common to add. The problem with this is that you cannot export shapekeys with the subdivision surface modifier. The fbx export will work, but the shapekeys will not be included. You might say to just apply the modifier and then export, but Blender doesn't let you apply this modifier if there are shapekeys (or blendshapes, I forget what Blender calls them). So if you want to create the shapekeys, you first need to apply the subdivision surface modifier. If you find yourself in this situation there is a [process you can follow here](https://blender.stackexchange.com/questions/56795/script-outdated-shape-keys-and-applying-subdivision-surface-modifier/209214#209214) or you can check out this [addon](https://blendermarket.com/products/skkeeper), although I have not personally tried it and I don't know if it still works with Blender 3.X.
 
-The moral of this story is to do simple, minimal tests of any feature you haven't used yet to iron out the wrinkles. It is no fun to create 50 shapekeys on a mesh only to find out you can't export them because you have a subdivision surface modifier on the mesh. 
+The moral of this story is to do simple, minimal tests of any feature you haven't used yet to iron out the wrinkles. It is no fun to create 50 shapekeys on a mesh only to find out you can't export them because you have a subdivision surface modifier on the mesh.
+
+## Animating
+
+### Rigging
+
+Rigging is the process of giving your 3D model an armature, or "skeleton," so that it can be animated. Each vertex (individual point) in your mesh is then assigned a weight for each bone in the armature. The weight determines how much that vertex is affect by the bone. For example, let's say we have a 3D cat. The armature will roughly resemble an actual cat skeleton with bones for the head, neck, spine, legs, and tail. The vertices in the tail portion will have high weights for the tail bones and empty weights for the head bone. We don't want the motion of the tail to be tied directly to the motion of the head.
+
+Lens Studio does not have a limit on the number of bones a model can have, but each vertex can only be influenced by four bones simultaneously. If there are more than four bones influencing a vertex, the model will still import but some of those weights will be dropped which can result in unexpected motion. Meta Spark has the same bone limits as Lens Studio. Effect House has the same four-bone-per-vertex limit, but it has the additional limitation of no more than 50 bones per model.
+
+### Creating the animation
+
+Both Lens Studio and Effect House recommend using a framerate of 30 fps for any animated model, but Meta Spark (for whatever reason) recommends 24 fps. Stick with bone animations (rotation, position, and scale are all fine) and try to avoid directly animating objects.
+
+If you are not good at animating and just need something simple, you can use [Mixamo](https://www.mixamo.com/#/) to animate humanoid characters using a mocap library. It also has the benefit of rigging your character for you, but I think you might need to remove some bones to meet the 50 bone limit of Effect House. But that's still a lot easier than animating something yourself.
+
+## UV Map
+
+Before we can texture our model and make it look nice, we need to give it a UV map. A UV map defines how the three dimensional surface of your model maps to a two dimensional image. That mapping is how an image will be displayed on your mesh. If you downloaded a 3D object from the internet, there's a good chance it already has a UV map. If you created the model yourself, you'll have to create one. Your 3D software probably has some form of automatic UV unwrapping. If you need more control over the map, you'll need to define where the various faces of your model can be split by creating seams.
+
+As we'll see later, there are pretty strict resolution limits on the textures we can use, so you might be wondering if you can use UDIM tiles. Unfortunately you cannot. Your model can have but a single UV tile.
+
+## Texturing
+
