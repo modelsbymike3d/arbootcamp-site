@@ -15,9 +15,9 @@ The great thing about augmented reality (AR) is that it combines lots of differe
 
 The guidelines I share here will be a mix of information from the various platforms themselves along with some things I learned along the way. As you prepare your 3D assets, please refer to the guides for the platform you are building for in case things have changed since I wrote this guide. In general 3D asset creation is the same for all the platforms but they differ in some details. I'll try to note this when possible. Here are the platform-specific guides:
 
-* [Lens Studio (Snapchat)](https://docs.snap.com/lens-studio/references/guides/adding-content/3d/exporting-content/overview)
-* [Effect House (TikTok)](https://effecthouse.tiktok.com/learn/guides/3d/3d-asset-preparation/)
-* [Meta Spark (Instagram/Facebook)](https://sparkar.facebook.com/ar-studio/learn/articles/creating-and-prepping-assets/creating-3D-objects-for-spark-ar-studio)
+- [Lens Studio (Snapchat)](https://docs.snap.com/lens-studio/references/guides/adding-content/3d/exporting-content/overview)
+- [Effect House (TikTok)](https://effecthouse.tiktok.com/learn/guides/3d/3d-asset-preparation/)
+- [Meta Spark (Instagram/Facebook)](https://sparkar.facebook.com/ar-studio/learn/articles/creating-and-prepping-assets/creating-3D-objects-for-spark-ar-studio)
 
 ## The 3D mesh
 
@@ -62,4 +62,80 @@ Before we can texture our model and make it look nice, we need to give it a UV m
 As we'll see later, there are pretty strict resolution limits on the textures we can use, so you might be wondering if you can use UDIM tiles. Unfortunately you cannot. Your model can have but a single UV tile.
 
 ## Texturing
+
+Now it's time to make our model look awesome by giving it some textures! Texturing is the process of using several different image maps to define how our model should look. I'll go over the types of textures and some limitations, but be sure to check out the texturing guide for each platform you are interested in:
+
+- [Lens Studio texturing](https://docs.snap.com/lens-studio/references/guides/adding-content/3d/texturing/photoshop-texturing)
+- [Effect House texturing](https://effecthouse.tiktok.com/learn/guides/textures-and-materials/standard-pbr/)
+- [Meta Spark texturing](https://sparkar.facebook.com/ar-studio/learn/tutorials/working-with-textures-and-materials)
+
+### Texture types
+
+Each of the social AR platforms follows a PBR channel packing schema for their materials, but they each pack channels differently. We'll go over the base maps here and then go over how they pack them together. For each texture type I'll be including a sample image of ["Painted Metal 02"](https://www.cgbookcase.com/textures/painted-metal-02) from cgbookcase, an excellent resource for textures.
+
+#### Diffuse
+
+The diffuse texture, also known as albedo, is the colors on our model, typically without any lighting applied.
+
+![An example diffuse texture](/images/guides/3d-for-ar/diffuse.jpg)
+
+#### Normal
+
+A normal map defines which direction that part of the mesh is facing. Now the mesh itself is already facing different directions, so the normal map is a great way to add extra detail without needing to have a super high detailed mesh.
+
+Normal maps can come in two formats, DirectX and OpenGL. Lens Studio specifically requests OpenGL, but there's no documentation that I'm aware of for what Meta Spark and Effect House need, but I would guess OpenGL. The difference between the two formats is the green channel is inverted, so if you add a normal map to your model and the bumps/depressions are inverted, you'll just need to invert the green channel on your normal map. You can read more about this [here](https://www.texturecan.com/post/3/DirectX-vs-OpenGL-Normal-Map/).
+
+![An example normal map](/images/guides/3d-for-ar/normal.jpg)
+
+#### Ambient Occlusion
+
+Ambient occlusion simulates soft shadows that result from two parts of a mesh being close to each other. It helps make your 3D object look a bit more realistic. This is just a greyscale image.
+
+![An example ambient occlusion map](/images/guides/3d-for-ar/ao.jpg)
+
+#### Roughness
+
+The roughness map defines which portions of your mesh are smooth and shiney vs "rough" or matte. It is a greyscale image.
+
+![An example roughness map](/images/guides/3d-for-ar/rough.jpg)
+
+#### Metalness
+
+The metalness map defines how metallic your mesh is. Metallic surfaces are reflective while non-metallic surfaces are not. This is a greyscale image.
+
+![An example metalness map](/images/guides/3d-for-ar/metal.jpg)
+
+#### Channel packing
+
+All three packages - Lens Studio, Meta Spark, and Effect House - accept diffuse and normal textures. However, they take the ambient occlusion, roughness, and metalness maps and pack them into a single image. They do this because those maps are each greyscale so they can occupy a single channel each of a red-green-blue (RGB) image. If you are using Substance Painter, it has presets for both Lens Studio (which will also work for Effect House) and Meta Spark and will produce the packed textures automatically. If you have the greyscale maps, I like to use this [Combine RGB channel images tool](http://flaticon.sodhanalibrary.com/combine-rgb-chanels-online.html) to create my packed maps.
+
+Lens Studio packs these three into a "Material Params" texture with metallic on red, roughness on green, and ambient occlusion on blue. Effect House follows the same schema but calls these "MRAO" textures.
+
+![An example material params or MRAO map](/images/guides/3d-for-ar/material-params.jpg)
+
+Meta Spark packs these into "ORM" textures with ambient occlusion on red, roughness on green, and metallic on blue.
+
+![An example ORM map](/images/guides/3d-for-ar/orm.jpg)
+
+#### Opacity
+
+Some AR software supports separate greyscale opacity maps, but you can also use PNG images with transparency in them. It mainly comes down to preference and file size/resolution. 
+
+### Creating the textures
+
+There are several ways to texture a 3D object. If you are routinely modeling and texturing 3D objects, you may already be using a tool such as Substance Painter which allows you to paint directly on a 3D mesh. If not, your 3D software may have some built-in texture painting capabilities. Another route may be to create procedural textures inside your 3D software using material nodes or some equivalent. Keep in mind that these materials cannot be directly exported - you first need to bake the material to image textures.
+
+### Texture resolution
+
+Lens Studio supports up to 2k (2048x2048 pixel) resolution textures. Meta Spark and Effect House are both capped at 1k textures. If you need more resolution, you can tile your texture (if it is tileable), or you can assign different portions of your 3D model to different materials. You are limited to just the single UV tile, but you can overlap portions of your UV map if the overlapping portions belong to different materials. It makes your UV map a bit messy, but it is a possibility.
+
+> Remember, people are using your filters on mobile phones - they are not rendering out 4k images and videos.
+
+Lens Studio and Meta Spark support non-square images, but Effect House requires square images with a power of two resolution (256x256, 512x512, etc).
+
+### Image formats
+
+All three software packages accept both JPG and PNG images. Unless your image has transparency or you can't sacrifice any image quality, I would stick with JPG. Both Lens Studio and Meta Spark have some built-in image compression, but it's kinda slow. I personally prefer to use [Crushee](https://crushee.app/) to do some preliminary image compression/optimization before importing my images.
+
+Lens Studio has an overall 8 MB limit (increased to 25 MB with remote assets) per lens, Meta Spark is at 4 MB, and Effect House is at 5 MB with a 1 MB limit on individual images.
 
