@@ -69,6 +69,12 @@ Now it's time to make our model look awesome by giving it some textures! Texturi
 - [Effect House texturing](https://effecthouse.tiktok.com/learn/guides/textures-and-materials/standard-pbr/)
 - [Meta Spark texturing](https://sparkar.facebook.com/ar-studio/learn/tutorials/working-with-textures-and-materials)
 
+Now we could skip using image textures and just use solid colors. That does work and might be what you want depending on the filter you are creating, but image textures can really take your creation to the next level.
+
+### Add a material
+
+Now before we can add image textures to our model it needs at least one material. You can assign multiple materials to your model and have them assigned to different parts of the mesh, but make sure you have at least one material to start.
+
 ### Texture types
 
 Each of the social AR platforms follows a PBR channel packing schema for their materials, but they each pack channels differently. We'll go over the base maps here and then go over how they pack them together. For each texture type I'll be including a sample image of ["Painted Metal 02"](https://www.cgbookcase.com/textures/painted-metal-02) from cgbookcase, an excellent resource for textures.
@@ -119,7 +125,7 @@ Meta Spark packs these into "ORM" textures with ambient occlusion on red, roughn
 
 #### Opacity
 
-Some AR software supports separate greyscale opacity maps, but you can also use PNG images with transparency in them. It mainly comes down to preference and file size/resolution. 
+Some AR software supports separate greyscale opacity maps, but you can also use PNG images with transparency in them. It mainly comes down to preference and file size/resolution.
 
 ### Creating the textures
 
@@ -139,3 +145,22 @@ All three software packages accept both JPG and PNG images. Unless your image ha
 
 Lens Studio has an overall 8 MB limit (increased to 25 MB with remote assets) per lens, Meta Spark is at 4 MB, and Effect House is at 5 MB with a 1 MB limit on individual images.
 
+## Import into Lens Studio
+
+We add 3D models to Lens Studio via the Resources Panel. You'll see a new object in there with an "F" icon. If you expand that you should see some folders for meshes, animations, and materials and then a "P" icon. That "P" icon is what you then drag up to the Objects Panel to add to your scene.
+
+If your model looks untextured, you may need to import your image textures separately. All you need to do is import them via the Resources Panel, find the material(s) for your model, then assign them to the proper channels.
+
+[Here's more information about importing 3D models to Lens Studio.](https://docs.snap.com/lens-studio/references/guides/adding-content/3d/importing-content/fbx-3d-object-import#adding-the-fbx-object)
+
+## Import into Effect House
+
+We add 3D models to Effect House via the Assets Panel. This will create a folder for your object with its accompanying materials and textures. If the image textures weren't automatically imported, all you need to do is import those separately. To add your model to the scene, find the asset with the same name as your model and the box icon. Drag that into the scene hierarchy and you are good to go!
+
+[Here's more informatino about importing 3D models to Effect House.](https://effecthouse.tiktok.com/learn/guides/3d/3d-asset-preparation/)
+
+## Import into Meta Spark
+
+We add 3D models to Meta Spark via the Assets Panel. This will create a folder for your object with its accompanying materials and textures. If the image textures weren't automatically imported, all you need to do is import those separately. To add your model to the scene, open up that folder and drag the object with the box icon to the Scene Panel.
+
+[Here's more information about importing 3D models to Meta Spark.](https://sparkar.facebook.com/ar-studio/learn/articles/3D/3D-objects)
