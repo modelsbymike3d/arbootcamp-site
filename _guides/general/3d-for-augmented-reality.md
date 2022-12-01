@@ -1,11 +1,15 @@
 ---
-title: 3D for Augmented Reality
-description: So you want to add grain to your filter but don't know where to find some? We've got you covered.
+title: Getting started with 3D graphics for augmented reality
+description: How do you get your 3D models into AR filters? Whether you are a beginner or an experienced 3D artist, this guide will show you the ins and outs of getting your 3D models into Lens Studio, Effect House, and Meta Spark Studio
 path: general/3d-for-augmented-reality
-image: /images/guides/general-grain.jpg
+image: /images/guides/3d-for-ar/3d-for-ar.jpg
 platform: General
 software:
 ---
+
+`youtube:bGtEHdZoOEc`
+
+> At the time of writing I'm using Lens Studio 4.34, Meta Spark v151, and Effect House 1.18.1.
 
 The great thing about augmented reality (AR) is that it combines lots of different disciplines into one. The bad thing about AR is that it combines lots of different disciplines into one. You'll find 3D graphics, 2D graphics, programming, design, and machine learning all coming together to create awesome experiences. But most people aren't experts in all those fields. This guide will specifically address the 3D portion of AR. I'll walk you through all the concepts you need to know so that you'll have a foundation to build upon and keep learning 3D graphics. If you are already an experienced 3D artist, you may still find this guide useful because it will cover some of the nuances of preparing 3D assets for AR.
 
@@ -145,7 +149,11 @@ All three software packages accept both JPG and PNG images. Unless your image ha
 
 Lens Studio has an overall 8 MB limit (increased to 25 MB with remote assets) per lens, Meta Spark is at 4 MB, and Effect House is at 5 MB with a 1 MB limit on individual images.
 
-## Import into Lens Studio
+## Importing
+
+> When you import your 3D models, double check the base color of each material. Unless you want to add a tint or reduce the vibrancy, you'll want to make sure the base color is white. I often forget to change that when exporting from Blender and end up with a light grey for my base color.
+
+### Import into Lens Studio
 
 We add 3D models to Lens Studio via the Resources Panel. You'll see a new object in there with an "F" icon. If you expand that you should see some folders for meshes, animations, and materials and then a "P" icon. That "P" icon is what you then drag up to the Objects Panel to add to your scene.
 
@@ -153,14 +161,18 @@ If your model looks untextured, you may need to import your image textures separ
 
 [Here's more information about importing 3D models to Lens Studio.](https://docs.snap.com/lens-studio/references/guides/adding-content/3d/importing-content/fbx-3d-object-import#adding-the-fbx-object)
 
-## Import into Effect House
+### Import into Effect House
 
 We add 3D models to Effect House via the Assets Panel. This will create a folder for your object with its accompanying materials and textures. If the image textures weren't automatically imported, all you need to do is import those separately. To add your model to the scene, find the asset with the same name as your model and the box icon. Drag that into the scene hierarchy and you are good to go!
 
 [Here's more informatino about importing 3D models to Effect House.](https://effecthouse.tiktok.com/learn/guides/3d/3d-asset-preparation/)
 
-## Import into Meta Spark
+### Import into Meta Spark
 
 We add 3D models to Meta Spark via the Assets Panel. This will create a folder for your object with its accompanying materials and textures. If the image textures weren't automatically imported, all you need to do is import those separately. To add your model to the scene, open up that folder and drag the object with the box icon to the Scene Panel.
 
 [Here's more information about importing 3D models to Meta Spark.](https://sparkar.facebook.com/ar-studio/learn/articles/3D/3D-objects)
+
+## Procedural materials
+
+We talked about image textures, but in Lens Studio and Meta Spark you can create procedural textures. In Lens Studio you have a dedicated [material editor](https://docs.snap.com/lens-studio/references/guides/lens-features/graphics/materials/material-editor/introduction-and-concepts) and in Meta Spark you can do some pretty neat stuff with the [Patch Editor](https://sparkar.facebook.com/ar-studio/learn/patch-editor#Creating-patches) to do some image manipulation. On top of that, both programs support some flavor of GLSL. I have tutorials on [converting from Shadertoy to Lens Studio](https://www.youtube.com/watch?v=1CdKj_kqieY) and [converting from Shadertoy to Meta Spark](https://www.youtube.com/watch?v=-uNhzkUSPH8).
